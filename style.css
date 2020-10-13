@@ -1,0 +1,205 @@
+@-webkit-keyframes glitch {
+  2%, 64% {
+    -webkit-transform: translate(2px, 0) skew(0deg);
+            transform: translate(2px, 0) skew(0deg);
+  }
+  4%, 60% {
+    -webkit-transform: translate(-2px, 0) skew(0deg);
+            transform: translate(-2px, 0) skew(0deg);
+  }
+  62% {
+    -webkit-transform: translate(0, 0) skew(5deg);
+            transform: translate(0, 0) skew(5deg);
+  }
+}
+
+@keyframes glitch {
+  2%, 64% {
+    -webkit-transform: translate(2px, 0) skew(0deg);
+            transform: translate(2px, 0) skew(0deg);
+  }
+  4%, 60% {
+    -webkit-transform: translate(-2px, 0) skew(0deg);
+            transform: translate(-2px, 0) skew(0deg);
+  }
+  62% {
+    -webkit-transform: translate(0, 0) skew(5deg);
+            transform: translate(0, 0) skew(5deg);
+  }
+}
+
+@-webkit-keyframes glitchTop {
+  2%, 64% {
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+  }
+  4%, 60% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+  62% {
+    -webkit-transform: translate(13px, -1px) skew(-13deg);
+            transform: translate(13px, -1px) skew(-13deg);
+  }
+}
+
+@keyframes glitchTop {
+  2%, 64% {
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+  }
+  4%, 60% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+  62% {
+    -webkit-transform: translate(13px, -1px) skew(-13deg);
+            transform: translate(13px, -1px) skew(-13deg);
+  }
+}
+
+@-webkit-keyframes glitchBotom {
+  2%, 64% {
+    -webkit-transform: translate(-2px, 0);
+            transform: translate(-2px, 0);
+  }
+  4%, 60% {
+    -webkit-transform: translate(-2px, 0);
+            transform: translate(-2px, 0);
+  }
+  62% {
+    -webkit-transform: translate(-22px, 7px) skew(21deg);
+            transform: translate(-22px, 7px) skew(21deg);
+  }
+}
+
+@keyframes glitchBotom {
+  2%, 64% {
+    -webkit-transform: translate(-2px, 0);
+            transform: translate(-2px, 0);
+  }
+  4%, 60% {
+    -webkit-transform: translate(-2px, 0);
+            transform: translate(-2px, 0);
+  }
+  62% {
+    -webkit-transform: translate(-22px, 7px) skew(21deg);
+            transform: translate(-22px, 7px) skew(21deg);
+  }
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.topic {
+  width: 50%;
+  height: 400px;
+  background-color: purple;
+}
+
+.menu-select {
+  width: 25%;
+}
+
+.menu-select .menu__item {
+  position: relative;
+  margin-top: 7%;
+  margin-bottom: 7%;
+}
+
+.menu-select .menu__item .item__bar-blue {
+  width: 100%;
+  height: 70px;
+  background-color: #0E397F;
+  z-index: 1;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.menu-select .menu__item .item__bar-white {
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ffa500;
+  z-index: 2;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.menu-select .menu__item .item__bar-white .title1:before {
+  content: attr(data-before);
+  word-break: break-all;
+}
+
+.menu-select .menu__item .item__bar-white .title1:after {
+  content: attr(data-after);
+  word-break: break-all;
+}
+
+.menu-select .menu__item .item__bar-white .glitch {
+  color: yellow;
+}
+
+.menu-select .menu__item .item__bar-white .glitch:hover {
+  -webkit-animation: glitch 2s linear infinite;
+          animation: glitch 2s linear infinite;
+}
+
+.menu-select .menu__item .item__bar-white .glitch:hover:before {
+  opacity: 1;
+  -webkit-animation: glitchTop 2s linear infinite;
+          animation: glitchTop 2s linear infinite;
+}
+
+.menu-select .menu__item .item__bar-white .glitch:hover:after {
+  opacity: 1;
+  -webkit-animation: glitchBotom 2.5s linear infinite;
+          animation: glitchBotom 2.5s linear infinite;
+}
+
+.menu-select .menu__item .item__bar-white .glitch:before {
+  opacity: 0;
+  content: attr(title);
+  position: absolute;
+  left: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+.menu-select .menu__item .item__bar-white .glitch:after {
+  opacity: 0;
+  content: attr(title);
+  position: absolute;
+  left: 0;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+.title {
+  width: 60%;
+  margin-top: -20%;
+  margin-left: 10%;
+  font-size: 3vw;
+  border: 1px solid red;
+}
+
+.title .encrypted-title5:before {
+  content: attr(data-before);
+  word-break: break-all;
+}
+
+.title .encrypted-title5:after {
+  content: attr(data-after);
+  word-break: break-all;
+}
+/*# sourceMappingURL=style.css.map */

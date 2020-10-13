@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fullpage.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="fullpage">
+        <div class="section">Some section</div>
+        <div class="section">
+            <div class="container">
+                <nav class="menu-select">
+                    <div class="menu__item">
+                        <div class="item__bar-blue bar-1"></div>
+                        <div class="item__bar-white bar-1"><h1 class="encrypted-title title1">Compétence</h1></div>
+                    </div>
+                    <div class="menu__item">
+                        <div class="item__bar-blue bar-2"></div>
+                        <div class="item__bar-white bar-2"><h1 class="encrypted-title title2">Technologie</h1></div>
+                    </div>
+                    <div class="menu__item">
+                        <div class="item__bar-blue bar-3"></div>
+                        <div class="item__bar-white bar-3"><h1 class="encrypted-title title3">Parcours</h1></div>
+                    </div>
+                    <div class="menu__item">
+                        <div class="item__bar-blue bar-4"></div>
+                        <div class="item__bar-white bar-4"><h1 class="encrypted-title title4">Parcours</h1></div>
+                    </div>
+                </nav>
+        
+                <section class="topic"></section>
+            </div> 
+        </div>
+        <div class="section">
+            <div class="slide" data-anchor="slide1"></div>
+            <div class="slide" data-anchor="slide2"></div>
+        </div>
+        <div class="section">
+            <div class="slide" data-anchor="slide1">
+                <div class="title">
+                    <p>I design and develop: <span class="encrypted-title5"></span></p>
+                </div>
+            </div>
+            <div class="slide" data-anchor="slide2"></div>
+        </div>
+    </div>
+
+    <ul id="myMenu">
+        <li data-menuanchor="firstPage" class="active"><a href="#firstPage">First section</a></li>
+        <li data-menuanchor="secondPage"><a href="#secondPage">Second section</a></li>
+        <li data-menuanchor="thirdPage"><a href="#thirdPage">Third section</a></li>
+        <li data-menuanchor="fourthPage"><a href="#fourthPage">Fourth section</a></li>
+    </ul>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" ></script>
+    <script type="text/javascript" src="fullpage.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
