@@ -134,17 +134,20 @@ function scramble(el, word, delay) {
 }
 
 function onTweenStart() {
-
     let currentTarget = this.targets()[1]
     let targetClassList = currentTarget.lastChild.classList
     let titleTarget = "." + targetClassList[1]
-    console.log(titleTarget)
 
     let el = document.querySelector(titleTarget)
 
     let word = el.innerHTML
 
-    scramble(el, word, 40)
+    function resolve() {
+        targetClassList.remove(targetClassList[1])
+        targetClassList.add("glitch")
+    }
+
+    scramble(el, word, 40).then(resolve)
 }
 
 function myTimeLine() {
@@ -157,3 +160,129 @@ function myTimeLine() {
         .fromTo(".bar-4", {scaleX: 0}, {scaleX: 1, ease: "power3.in", stagger:0.250, duration: 0.250, onStart: onTweenStart})
         .fromTo(".topic", {opacity: 0}, {opacity: 1, duration: 1.8}, "-=0.750")
 }
+
+// Effet black screen
+let selector = document.querySelectorAll(".screen-content__text")
+
+for(let i = 0; i < selector.length; i++)
+{
+    selector[i].setAttribute("data-content", selector[i].innerHTML)
+}
+
+// Effet perspective
+// Init
+let containerList = document.querySelectorAll(".project-item")
+let inner = document.querySelectorAll(".inner")
+
+// Mouse
+let mouse = {
+    // Position de l'élément
+    _x: 0,
+    _y: 0,
+
+    // Position de la souris
+    x: 0,
+    y: 0,
+
+    // Tableau des coordonnées des différents éléments (1 element = 1 objet)
+    coordonateTab: [
+    {
+        x: 0,
+        y: 0
+    },
+    {
+        x: 0,
+        y: 0
+    },
+    {
+        x: 0,
+        y: 0
+    },
+    {
+        x: 0,
+        y: 0
+    },
+    ],
+    updatePosition: function(event, target) {
+    // Position de la souris par rapport au centre de l'élément
+    let e = event || window.event
+    this.x = e.clientX - this.coordonateTab[target].x
+    this.y = (e.clientY - this.coordonateTab[target].y) * -1
+    },
+    setOrigin: function(el, counter) {
+    // Position du centre de l'élément
+    this.coordonateTab[counter].x = el.offsetLeft + Math.floor(el.offsetWidth / 2)
+    this.coordonateTab[counter].y = el.offsetTop + Math.floor(el.offsetHeight / 2)
+    },
+    show: function() {
+    return "(" + this.x + ", " + this.y + ")"
+    }
+};
+
+// On définit les coordonnées du centre de notre éléments
+
+for(let i = 0; i < containerList.length; i++){
+    mouse.setOrigin(containerList[i], i)
+}
+
+//-----------------------------------------
+
+let counter = 0
+let updateRate = 10
+function isTimeToUpdate() {
+    return counter++ % updateRate === 0
+};
+
+//-----------------------------------------
+let target = null
+
+function onMouseEnterHandler(event) {
+    target = parseInt(event.target.classList[1])
+    update(event, target)
+};
+
+function onMouseLeaveHandler() {
+    inner[target].style = ""
+    target = null
+};
+
+function onMouseMoveHandler(event) {
+    if (isTimeToUpdate()) {
+    update(event, target)
+    }
+};
+
+//-----------------------------------------
+
+function update(event, target) {
+    mouse.updatePosition(event, target)
+    updateTransformStyle(
+    (mouse.y / inner[target].offsetHeight * 3).toFixed(2),
+    (mouse.x / inner[target].offsetWidth * 3).toFixed(2),
+    target
+    );
+};
+
+function updateTransformStyle(x, y, target) {
+    let style = "rotateX(" + x + "deg) rotateY(" + y + "deg)"
+    inner[target].style.transform = style
+    inner[target].style.webkitTransform = style
+    inner[target].style.mozTransform = style
+    inner[target].style.msTransform = style
+    inner[target].style.oTransform = style
+};
+
+//-----------------------------------------
+
+for(let i = 0; i < containerList.length; i++){
+    containerList[i].addEventListener("mouseenter", onMouseEnterHandler)
+    containerList[i].addEventListener("mouseleave", onMouseLeaveHandler)
+    containerList[i].addEventListener("mousemove", onMouseMoveHandler)
+}
+
+// Gestion du redimensionnement
+window.addEventListener("resize", () => {
+    for(let i = 0; i < containerList.length; i++){
+    mouse.setOrigin(containerList[i], i)
+    }
+})
