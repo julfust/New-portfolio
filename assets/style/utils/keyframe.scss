@@ -1,0 +1,71 @@
+@keyframes glitch{
+    2%,64%{
+    transform: scale(1.15) translate(2px,0) skew(0deg);
+    }
+    4%,60%{
+        transform: scale(1.15) translate(-2px,0) skew(0deg);
+    }
+    62%{
+        transform: scale(1.15) translate(0,0) skew(5deg); 
+    }
+}
+
+@keyframes glitchTop{
+    2%,64%{
+        transform: translate(2px,-2px);
+    }
+    4%,60%{
+        transform: translate(-2px,2px);
+    }
+    62%{
+        transform: translate(13px,-1px) skew(-13deg); 
+    }
+}
+
+@keyframes glitchBotom{
+    2%,64%{
+        transform: translate(-2px,0);
+    }
+    4%,60%{
+        transform: translate(-2px,0);
+    }
+    62%{
+        transform: translate(-22px, 7px) skew(21deg); 
+    }
+}
+
+@keyframes colorPulse {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    48%, 52% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+  
+@keyframes wave {
+    0% {
+        box-shadow:0 -10vh 20vh #0c0;
+        transform: translateY(-500%);
+    }
+    48%, 52% {
+        box-shadow:0 -10vh 20vh #090;
+    }
+    50% {
+        box-shadow:0 -10vh 20vh #060;
+    }
+    100% {
+        box-shadow:0 -10vh 20vh #0c0;
+        transform: translateY(1400%);
+    }
+}
+  
+@keyframes blink {
+    50% {
+        opacity:0;
+    }
+}

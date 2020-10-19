@@ -5,35 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="fullpage.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/style/style.css">
 </head>
 <body>
     <div id="fullpage">
         <div class="section">Some section</div>
         <div class="section">
-            <div class="container">
-                <nav class="menu-select">
-                    <div class="menu__item">
-                        <div class="item__bar-blue bar-1"></div>
-                        <div class="item__bar-white bar-1"><h1 class="encrypted-title title1" title="Compétence">Compétence</h1></div>
+            <div class="container-section2">
+                <nav class="topic-menu">
+                    <div class="topic-menu__section">
+                        <div class="section__overground bar-1"></div>
+                        <div class="section__background bar-1"><h1 class="background__title title1" title="Compétence">Compétence</h1></div>
                     </div>
-                    <div class="menu__item">
-                        <div class="item__bar-blue bar-2"></div>
-                        <div class="item__bar-white bar-2"><h1 class="encrypted-title title2" title="Technologie">Technologie</h1></div>
+                    <div class="topic-menu__section">
+                        <div class="section__overground bar-2"></div>
+                        <div class="section__background bar-2"><h1 class="background__title title2" title="Technologie">Technologie</h1></div>
                     </div>
-                    <div class="menu__item">
-                        <div class="item__bar-blue bar-3"></div>
-                        <div class="item__bar-white bar-3"><h1 class="encrypted-title title3" title="Parcours">Parcours</h1></div>
+                    <div class="topic-menu__section">
+                        <div class="section__overground bar-3"></div>
+                        <div class="section__background bar-3"><h1 class="background__title title3" title="Parcours">Parcours</h1></div>
                     </div>
-                    <div class="menu__item">
-                        <div class="item__bar-blue bar-4"></div>
-                        <div class="item__bar-white bar-4"><h1 class="encrypted-title title4" title="Passion">Passion</h1></div>
+                    <div class="topic-menu__section">
+                        <div class="section__overground bar-4"></div>
+                        <div class="section__background bar-4"><h1 class="background__title title4" title="Passion">Passion</h1></div>
                     </div>
                 </nav>
         
-                <section class="topic">
-                    <p class="screen-content"><span class="screen-content__text text1">It was this howling and firing of the guns at Ripley and St. George's Hill that we had heard at Upper Halliford. The Ripley gunners, unseasoned artillery volunteers who ought never to have been placed in such a position, fired one wild, premature, ineffectual volley, and bolted on horse and foot through the deserted village, while the Martian, without using his Heat-Ray, walked serenely over their guns, stepped gingerly among them, passed in front of them, and so came unexpectedly upon the guns in Painshill Park, which he destroyed.</span></p>
-                    <p class="screen-content"><span class="screen-content__text text2">H. G. Wells - The War of the Worlds, Chapter 15</span></p>
+                <section class="topic-content">
+                    <div class="topic-content__item1 topic1">
+                        <p class="topic-content__item1--article black-screen-text">It was this howling and firing of the guns at Ripley and St. George's Hill that we had heard at Upper Halliford. The Ripley gunners, unseasoned artillery volunteers who ought never to have been placed in such a position, fired one wild, premature, ineffectual volley, and bolted on horse and foot through the deserted village, while the Martian, without using his Heat-Ray, walked serenely over their guns, stepped gingerly among them, passed in front of them, and so came unexpectedly upon the guns in Painshill Park, which he destroyed.</p>
+                        <p class="topic-content__item1--footer black-screen-text">H. G. Wells - The War of the Worlds, Chapter 15</p>
+                    </div>
                 </section>
             </div> 
         </div>
@@ -42,47 +44,42 @@
             <div class="slide" data-anchor="slide2"></div>
         </div>
         <div class="section">
-            <div class="slide" data-anchor="slide1">
-                <div class="title">
-                    <p>I design and develop: <span class="encrypted-title5"></span></p>
-                </div>
-                <div class="project-item-container">
-                    <div class="project-item 0">
-                        <h2>Global Magazine</h2>
-                        <div class="inner inner1">
-                            <div class="inner__img-container">
-                                <img src="./global-magazine.jpg" alt="image global magazine">
+                <div class="slide" data-anchor="slide1">
+                    <div class="container1-section4">
+                        <div class="heading-title">
+                            <div class="heading-title__overground"></div>
+                            <p class="heading-title__content">I design and develop: <span class="heading-title__content--scramble title5">Things</span></p>
+                        </div>
+                        <div class="project-container">
+                            <div class="project-item 0">
+                                <h2 class="project-item__title">Global Magazine</h2>
+                                <div class="project-item__picture">
+                                    <img src="./assets/img/global-magazine.jpg" alt="image global magazine">
+                                </div>
+                            </div>
+                            <div class="project-item 1">
+                                <h2 class="project-item__title">Kwick</h2>
+                                <div class="project-item__picture">
+                                    <img src="./assets/img/kwick.jpg" alt="image kwick">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="project-item 1">
-                        <h2>Kwick</h2>
-                        <div class="inner inner2">
-                            <div class="inner__img-container">
-                                <img src="./kwick.jpg" alt="image kwick">
+                        <div class="project-container">
+                            <div class="project-item 2">
+                                <h2 class="project-item__title">Steel Bal Run</h2>
+                                <div class="project-item__picture">
+                                    <img src="./assets/img/space-run.jpg" alt="image steel bal run">
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-item-container">
-                    <div class="project-item 2">
-                        <h2>Steel Bal Run</h2>
-                        <div class="inner inner3">
-                            <div class="inner__img-container">
-                                <img src="./space-run.jpg" alt="image steel bal run">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-item 3">
-                        <h2>Manage sch</h2>
-                        <div class="inner inner4">
-                            <div class="inner__img-container">
-                                <img src="./manage-sch.jpg" alt="image manage-sch">
+                            <div class="project-item 3">
+                                <h2 class="project-item__title">Manage sch</h2>
+                                <div class="project-item__picture">
+                                    <img src="./assets/img/manage-sch.jpg" alt="image manage-sch">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
             <div class="slide" data-anchor="slide2"></div>
         </div>
     </div>

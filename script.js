@@ -28,9 +28,8 @@ let page = {
 
 // full page
 new fullpage('#fullpage', {
-    anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+    anchors: ['Home', 'Profil', 'Experience', 'Project', 'lastPage'],
     sectionsColor: ['yellow', 'orange', '#C0C0C0', '#ADD8E6'],
-    normalScrollElements: '#element1',
     menu: '#myMenu',
     navigation: true,
     navigationTooltips: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
@@ -39,35 +38,76 @@ new fullpage('#fullpage', {
     animateAnchor: false,
 	
 	onLeave: function(origin, destination, direction){
-        if(destination.anchor == "secondPage")
+        if(destination.anchor == "Profil")
         {
             if(!page.section2.animation.alreadyPlayed)
             {
-                myTimeLine()
+                function triggerScramble() {
+                    let targetParent = this.targets()[1]
+                    let targetClassList = targetParent.lastChild.classList
+                    let targetClass = "." + targetClassList[1]
+                
+                    let el = document.querySelector(targetClass)
+                
+                    let word = el.innerHTML
+                
+                    function resolve() {
+                        targetClassList.remove(targetClassList[1])
+                        targetClassList.add("glitch")
+                    }
+                
+                    scramble(el, word, 40).then(resolve)
+                }
+
+                let s2Tl= gsap.timeline()
+            
+                s2Tl.fromTo(".bar-1", {scaleX: 0}, {scaleX: 1, ease: "power3.in", stagger:0.250, duration: 0.250, onStart: triggerScramble})
+                    .fromTo(".bar-2", {scaleX: 0}, {scaleX: 1, ease: "power3.in", stagger:0.250, duration: 0.250, onStart: triggerScramble})
+                    .fromTo(".bar-3", {scaleX: 0}, {scaleX: 1, ease: "power3.in", stagger:0.250, duration: 0.250, onStart: triggerScramble})
+                    .fromTo(".bar-4", {scaleX: 0}, {scaleX: 1, ease: "power3.in", stagger:0.250, duration: 0.250, onStart: triggerScramble})
+                    .fromTo(".topic-content", {opacity: 0}, {opacity: 1, duration: 1.8}, "-=0.750")
+
                 page.section2.animation.alreadyPlayed = true
             }
         }
         
-        if(destination.anchor == "fourthPage"){
+        if(destination.anchor == "Project"){
             {
                 if(!page.section4.animation.alreadyPlayed)
                 {
                     let wordList = ["Digital Product", "Marketing Website", "Mobile App"]
 
-                    let counter = 0;
+                    let index = 0;
 
-                    let target = document.querySelector(".encrypted-title5")
+                    let el = document.querySelector(".title5")
 
                     function resolve() {
-                        counter = (counter + 1) % wordList.length
-                        setTimeout(next, 4000)
+                        index = (index + 1) % wordList.length
+                        setTimeout(nextWord, 4000)
                     }
 
-                    function next() {
-                        scramble(target, wordList[counter], 25).then(resolve)
+                    function nextWord() {
+                        scramble(el, wordList[index], 25).then(resolve)
                     }
 
-                    next()
+                    function addClass() {
+                        let projectItemElements = document.querySelectorAll(".project-item__picture")
+
+                        for(let i = 0; i < projectItemElements.length; i++)
+                        {
+                            projectItemElements[i].className += " project-item__picture--animate3d"
+                        }
+
+                        nextWord()
+                    }
+
+                    let s4tl1 = gsap.timeline({onComplete: addClass})
+                
+                    s4tl1.fromTo(".heading-title__overground", {x: -930}, {x: 930, duration: 1.5})
+                        .fromTo(".heading-title__content", {opacity: 0}, {opacity: 1, duration: 0.4}, "-=0.5")
+                        .fromTo(".project-item__picture", {x: -600}, {x: 0, duration: 1})
+                        .fromTo(".project-item__picture", {scale: 0.75}, {scale: 1, ease: Bounce.easeOut,duration: 1})
+                        .fromTo(".project-item__title", {opacity: 0}, {opacity: 1, duration: 1})
 
                     page.section4.animation.alreadyPlayed = true
                 }
@@ -76,154 +116,110 @@ new fullpage('#fullpage', {
 	}
 });
 
-let section = fullpage_api.getActiveSection()
-console.log(section)
-
-let activeSlide = fullpage_api.getActiveSlide()
-console.log(activeSlide)
-
-
-
 // animation
-function scramble(el, word, delay) {
+function scramble(el, word, duration) {
     const promise = new Promise((resolve) => {
 
-        let dictionary = "0123456789qwertyuiopasdfghjklzxcvbnm!?></\a`~+*=@#$%".split('');
+        let randomCharList = "0123456789qwertyuiopasdfghjklzxcvbnm!?></\a`~+*=@#$%".split('');
 
-        let ran = function() {
-            return Math.floor(Math.random() * dictionary.length)
+        function randomIndex() {
+            return Math.floor(Math.random() * randomCharList.length)
         }
     
-        let ranString = function(amt) {
-        let string = '';
-        for(let i = 0; i < amt; i++) {
-            string += dictionary[ran()];
-        }
-        return string;
+        function randomString(Length) {
+            let scrambledString = '';
+            for(let i = 0; i < Length; i++) {
+                scrambledString += randomCharList[randomIndex()];
+            }
+            return scrambledString;
         }
     
-        let init = function(str) {
-            let count = str.length;
+        function generate(str) {
+            let wordLength = str.length;
             
             el.innerHTML = '';
             
-            let gen = setInterval(function() {
+            let animationScramble = setInterval(function() {
 
-                el.setAttribute('data-before', ranString(count / 2));
-                el.setAttribute('data-after', ranString(count / 2));
-                if(delay > 0) {
-                delay--;
+                el.setAttribute('data-before', randomString(wordLength / 2));
+                el.setAttribute('data-after', randomString(wordLength / 2));
+                if(duration > 0) {
+                    duration--;
                 }
                 else {
-                    if(count < str.length) {
-                        el.innerHTML += str[str.length - count-1];
+                    if(wordLength < str.length) {
+                        el.innerHTML += str[str.length - wordLength - 1];
                     }
-                    count--;
-                    if(count === -1) {
-                        clearInterval(gen);
+                    wordLength--;
+                    if(wordLength === -1) {
+                        clearInterval(animationScramble);
                         resolve()
                     }
                 }
             }, 32);
         }
     
-        init(word);
+        generate(word);
     })
 
     return promise
 }
 
-function onTweenStart() {
-    let currentTarget = this.targets()[1]
-    let targetClassList = currentTarget.lastChild.classList
-    let titleTarget = "." + targetClassList[1]
-
-    let el = document.querySelector(titleTarget)
-
-    let word = el.innerHTML
-
-    function resolve() {
-        targetClassList.remove(targetClassList[1])
-        targetClassList.add("glitch")
-    }
-
-    scramble(el, word, 40).then(resolve)
-}
-
-function myTimeLine() {
-
-    let tl = gsap.timeline()
-
-    tl.fromTo(".bar-1", {scaleX: 0}, {scaleX: 1, ease: "power3.in", stagger:0.250, duration: 0.250, onStart: onTweenStart})
-        .fromTo(".bar-2", {scaleX: 0}, {scaleX: 1, ease: "power3.in", stagger:0.250, duration: 0.250, onStart: onTweenStart})
-        .fromTo(".bar-3", {scaleX: 0}, {scaleX: 1, ease: "power3.in", stagger:0.250, duration: 0.250, onStart: onTweenStart})
-        .fromTo(".bar-4", {scaleX: 0}, {scaleX: 1, ease: "power3.in", stagger:0.250, duration: 0.250, onStart: onTweenStart})
-        .fromTo(".topic", {opacity: 0}, {opacity: 1, duration: 1.8}, "-=0.750")
-}
-
 // Effet black screen
-let selector = document.querySelectorAll(".screen-content__text")
+let blackScreenElements = document.querySelectorAll(".black-screen-text")
 
-for(let i = 0; i < selector.length; i++)
+for(let i = 0; i < blackScreenElements.length; i++)
 {
-    selector[i].setAttribute("data-content", selector[i].innerHTML)
+    blackScreenElements[i].setAttribute("data-content", blackScreenElements[i].innerHTML)
 }
 
 // Effet perspective
 // Init
-let containerList = document.querySelectorAll(".project-item")
-let inner = document.querySelectorAll(".inner")
+let projectItemList = document.querySelectorAll(".project-item")
+let pictureList = document.querySelectorAll(".project-item__picture")
 
 // Mouse
-let mouse = {
-    // Position de l'élément
-    _x: 0,
-    _y: 0,
-
+let animate3d = {
     // Position de la souris
-    x: 0,
-    y: 0,
+    mouse : {
+        x: 0,
+        y: 0,
+    },
 
     // Tableau des coordonnées des différents éléments (1 element = 1 objet)
-    coordonateTab: [
-    {
-        x: 0,
-        y: 0
-    },
-    {
-        x: 0,
-        y: 0
-    },
-    {
-        x: 0,
-        y: 0
-    },
-    {
-        x: 0,
-        y: 0
-    },
+    el: [
+        {
+            x: 0,
+            y: 0
+        },
+        {
+            x: 0,
+            y: 0
+        },
+        {
+            x: 0,
+            y: 0
+        },
+        {
+            x: 0,
+            y: 0
+        },
     ],
     updatePosition: function(event, target) {
-    // Position de la souris par rapport au centre de l'élément
-    let e = event || window.event
-    this.x = e.clientX - this.coordonateTab[target].x
-    this.y = (e.clientY - this.coordonateTab[target].y) * -1
+        // Position de la souris par rapport au centre de l'élément
+        let e = event || window.event
+        this.mouse.x = e.clientX - this.el[target].x
+        this.mouse.y = (e.clientY - this.el[target].y) * -1
     },
     setOrigin: function(el, counter) {
-    // Position du centre de l'élément
-    this.coordonateTab[counter].x = el.offsetLeft + Math.floor(el.offsetWidth / 2)
-    this.coordonateTab[counter].y = el.offsetTop + Math.floor(el.offsetHeight / 2)
+        // Position du centre de l'élément
+        this.el[counter].x = el.offsetLeft + Math.floor(el.offsetWidth / 2)
+        this.el[counter].y = el.offsetTop + Math.floor(el.offsetHeight / 2)
     },
     show: function() {
-    return "(" + this.x + ", " + this.y + ")"
+        return "(" + this.mouse.x + ", " + this.mouse.y + ")"
     }
 };
-
-// On définit les coordonnées du centre de notre éléments
-
-for(let i = 0; i < containerList.length; i++){
-    mouse.setOrigin(containerList[i], i)
-}
 
 //-----------------------------------------
 
@@ -234,55 +230,57 @@ function isTimeToUpdate() {
 };
 
 //-----------------------------------------
-let target = null
+let elTarget = null
 
 function onMouseEnterHandler(event) {
-    target = parseInt(event.target.classList[1])
-    update(event, target)
+    elTarget = parseInt(event.target.classList[1])
+    update(event, elTarget)
 };
 
 function onMouseLeaveHandler() {
-    inner[target].style = ""
-    target = null
+    pictureList[elTarget].style = ""
+    elTarget = null
 };
 
 function onMouseMoveHandler(event) {
     if (isTimeToUpdate()) {
-    update(event, target)
+        update(event, elTtarget)
     }
 };
 
 //-----------------------------------------
 
-function update(event, target) {
-    mouse.updatePosition(event, target)
+function update(event, elTarget) {
+    animate3d.updatePosition(event, elTarget)
     updateTransformStyle(
-    (mouse.y / inner[target].offsetHeight * 3).toFixed(2),
-    (mouse.x / inner[target].offsetWidth * 3).toFixed(2),
-    target
+    (animate3d.mouse.y / pictureList[elTarget].offsetHeight * 3).toFixed(2),
+    (animate3d.mouse.x / pictureList[elTarget].offsetWidth * 3).toFixed(2),
+    elTarget
     );
 };
 
-function updateTransformStyle(x, y, target) {
+function updateTransformStyle(x, y, elTarget) {
     let style = "rotateX(" + x + "deg) rotateY(" + y + "deg)"
-    inner[target].style.transform = style
-    inner[target].style.webkitTransform = style
-    inner[target].style.mozTransform = style
-    inner[target].style.msTransform = style
-    inner[target].style.oTransform = style
+    pictureList[elTarget].style.transform = style
+    pictureList[elTarget].style.webkitTransform = style
+    pictureList[elTarget].style.mozTransform = style
+    pictureList[elTarget].style.msTransform = style
+    pictureList[elTarget].style.oTransform = style
 };
 
 //-----------------------------------------
 
-for(let i = 0; i < containerList.length; i++){
-    containerList[i].addEventListener("mouseenter", onMouseEnterHandler)
-    containerList[i].addEventListener("mouseleave", onMouseLeaveHandler)
-    containerList[i].addEventListener("mousemove", onMouseMoveHandler)
+for(let i = 0; i < projectItemList.length; i++){
+    // On défini les coordonnées du centre de nos éléments et on créer le gestionnaire d'évenement
+    animate3d.setOrigin(projectItemList[i], i)
+    projectItemList[i].addEventListener("mouseenter", onMouseEnterHandler)
+    projectItemList[i].addEventListener("mouseleave", onMouseLeaveHandler)
+    projectItemList[i].addEventListener("mousemove", onMouseMoveHandler)
 }
 
 // Gestion du redimensionnement
 window.addEventListener("resize", () => {
-    for(let i = 0; i < containerList.length; i++){
-    mouse.setOrigin(containerList[i], i)
+    for(let i = 0; i < projectItemList.length; i++){
+        animate3d.setOrigin(projectItemList[i], i)
     }
 })
