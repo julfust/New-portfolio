@@ -6,3 +6,35 @@
 
 @import "./sections/section2.scss";
 @import "./sections/section4/slide1.scss";
+
+.container-section1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    .home-article{
+        font-size: 2vw;
+        text-align: center;
+        border: 1px solid red;
+        .article__typed-string{
+            display: none;
+        }
+    }
+}
+
+.container1-section3{
+    display: flex;
+    justify-content: center;
+    .title-typed-string{
+        display: none;
+    }
+}
+
+.container2-section3{
+    display: flex;
+    justify-content: center;
+    .title-typed-string{
+        display: none;
+    }
+}
