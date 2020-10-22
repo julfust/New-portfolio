@@ -13,9 +13,10 @@
                 &__overground {
                     width: 100%;
                     height: 70px;
-                    background-color: #0E397F;
                     z-index: 1;
+                    background-color: #0E397F;
                     transform-origin: top left;
+                    transform: scaleX(0);
                 }
                 &__background {
                     width: 100%;
@@ -30,6 +31,7 @@
                     font-size: 2vw;
                     background-color: #ffa500;
                     transform-origin: top left;
+                    transform: scaleX(0);
                     .background__title {
                         @include scramble-layout;
                     }                
@@ -66,9 +68,10 @@
         width: 50vw;
         height: 400px;
         padding: 3%;
+        overflow:hidden;
+        opacity: 0;
         font-size: 1.4vw;
         font-family:'Fira Mono', monospace;
-        overflow:hidden;
         background-image:radial-gradient(#444, #111);
         
         &::before {

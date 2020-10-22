@@ -1,4 +1,4 @@
-export let coordonate = {
+export let data = {
     // Position de la souris
     mouse : {
         x: 0,
