@@ -9,39 +9,82 @@
 </head>
 <body>
     <div id="fullpage">
-        <div class="section"></div>
+        <div class="section">
+            <div class="container-section1">
+                <canvas class="home-logo"></canvas>
+                <article class="home-article">
+                    <div class="text-container">
+                        <p>Hi my name is Julien Fustier</p>
+                        <p>and I'm a Front-End developpeur</p>
+                        <p>Let me show you...</p>
+                    </div>
+                    <div class="typed-text-container">
+                        <p><span class="typed-text1"></span></p>
+                        <p><span class="typed-text2"></span></p>
+                        <p><span class="typed-text3"></span></p>
+                    </div>
+                </article>
+                <iframe class="arrow arrow1" src="./fleche2.svg" width="40" height="40">
+                    <img src="./fleche2.png" alt="une fleche">
+                </iframe>
+            </div>
+        </div>
         <div class="section">
             <div class="container-section2">
                 <nav class="topic-menu">
                     <div class="topic-menu__section">
                         <div class="section__overground bar-1"></div>
-                        <div class="section__background bar-1"><h1 class="background__title title1" title="Compétence">Compétence</h1></div>
+                        <div class="section__background bar-1"><a class="background__router-link" data-file-link="./assets/black-screen-router/competence.html"><h1 class="link__title title1" title="Compétence">Compétence</h1></a></div>
                     </div>
                     <div class="topic-menu__section">
                         <div class="section__overground bar-2"></div>
-                        <div class="section__background bar-2"><h1 class="background__title title2" title="Technologie">Technologie</h1></div>
+                        <div class="section__background bar-2"><a class="background__router-link" data-file-link="./assets/black-screen-router/technologie.html"><h1 class="link__title title2" title="Technologie">Technologie</h1></a></div>
                     </div>
                     <div class="topic-menu__section">
                         <div class="section__overground bar-3"></div>
-                        <div class="section__background bar-3"><h1 class="background__title title3" title="Parcours">Parcours</h1></div>
+                        <div class="section__background bar-3"><a class="background__router-link" data-file-link="./assets/black-screen-router/parcours.html"><h1 class="link__title title3" title="Parcours">Parcours</h1></a></div>
                     </div>
                     <div class="topic-menu__section">
                         <div class="section__overground bar-4"></div>
-                        <div class="section__background bar-4"><h1 class="background__title title4" title="Passion">Passion</h1></div>
+                       <div class="section__background bar-4"><a class="background__router-link" data-file-link="./assets/black-screen-router/passion.html"><h1 class="link__title title4" title="Passion">Passion</h1></a></div>
                     </div>
                 </nav>
         
-                <section class="topic-content">
-                    <div class="topic-content__item1 topic1">
-                        <p class="topic-content__item1--article black-screen-text">It was this howling and firing of the guns at Ripley and St. George's Hill that we had heard at Upper Halliford. The Ripley gunners, unseasoned artillery volunteers who ought never to have been placed in such a position, fired one wild, premature, ineffectual volley, and bolted on horse and foot through the deserted village, while the Martian, without using his Heat-Ray, walked serenely over their guns, stepped gingerly among them, passed in front of them, and so came unexpectedly upon the guns in Painshill Park, which he destroyed.</p>
-                        <p class="topic-content__item1--footer black-screen-text">H. G. Wells - The War of the Worlds, Chapter 15</p>
+                <section class="topic-screen">
+                    <div class="topic-screen__content0">
+                        <p class="content0--article">It was this howling and firing of the guns at Ripley and St. George's Hill that we had heard at Upper Halliford. The Ripley gunners, unseasoned artillery volunteers who ought never to have been placed in such a position, fired one wild, premature, ineffectual volley, and bolted on horse and foot through the deserted village, while the Martian, without using his Heat-Ray, walked serenely over their guns, stepped gingerly among them, passed in front of them, and so came unexpectedly upon the guns in Painshill Park, which he destroyed.</p>
+                        <p class="content0--footer">H. G. Wells - The War of the Worlds, Chapter 15 lorem</p>
                     </div>
                 </section>
             </div> 
         </div>
         <div class="section">
-            <div class="slide" data-anchor="slide1"></div>
-            <div class="slide" data-anchor="slide2"></div>
+            <div class="slide" data-anchor="slide1">
+                <div class="container1-section3">
+                    <div class="heading-title">
+                        <h1><span class="typed-text4"></span></h1>
+                    </div>
+                    <div class="entreprise-description">
+                        <div class="description__picture"></div>
+                        <div class="description__text"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" data-anchor="final-project">
+                <div class="container2-section3">
+                    <div class="heading-title">
+                        <h1><span class="typed-text5"></span></h1>
+                    </div>
+                    <div class="project-description">
+                        <div class="description__picture"></div>
+                        <iframe class="arrow arrow2" src="./fleche1.svg" width="200" height="200">
+                            <img src="./fleche1.png" alt="une fleche">
+                        </iframe>
+                        <div class="description__picture"></div>
+                    </div>
+                    <div class="description__text"></div>
+                </div>
+            </div>
         </div>
         <div class="section">
                 <div class="slide" data-anchor="slide1">
@@ -94,6 +137,6 @@
     <script type="text/javascript" src="./assets/lib/fullpage/fullpage.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" ></script>
     <script src="assets/lib/typed/typed.min.js"></script>
-    <script type="module" src="./assets/js/script.js"></script>
+    <script type="module" src="./assets/js/app.js"></script>
 </body>
 </html>

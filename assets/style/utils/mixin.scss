@@ -1,4 +1,5 @@
 @mixin scramble-layout {
+    margin: 0;
     &::before {
         content: attr(data-before);
         word-break: break-all;
@@ -9,18 +10,11 @@
     }
 }
 
-@mixin topic-item-layout {
+@mixin topic-text-layout {
     z-index: 3;
     position: relative;
-    color: #060;
-    &::before{
-        content:attr(data-content);
-        position: absolute;
-        top: 0;
-        z-index: 4;
-        color: #0c0;
-        animation:colorPulse 5s infinite ease-in-out;
-    }
+    color: #0c0;
+    animation:colorPulse 5s infinite ease-in-out;
 }
 
 @mixin topic-item-cursor {

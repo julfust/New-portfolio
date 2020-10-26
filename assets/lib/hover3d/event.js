@@ -35,7 +35,6 @@ export let hover3d = {
         },
         onResizeWindowsHandler: function() {
             window.addEventListener("resize", () => {
-                console.log("resize")
                 for(let i = 0; i < projectItemList.length; i++){
                     data.setOrigin(projectItemList[i], i)
                 }
