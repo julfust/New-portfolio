@@ -1,0 +1,45 @@
+@keyframes spotlightPulse {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes colorPulse {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    48%, 52% {
+        opacity: 0.7;
+    }
+    50% {
+        opacity: 0.4;
+    }
+}
+  
+@keyframes wave {
+    0% {
+        box-shadow: 0 -10vh 20vh #0c0;
+        transform: translateY(-750%);
+    }
+    48%, 52% {
+        box-shadow: 0 -10vh 20vh #090;
+    }
+    50% {
+        box-shadow: 0 -10vh 20vh #060;
+    }
+    100% {
+        box-shadow: 0 -10vh 20vh #0c0;
+        transform: translateY(750%);
+    }
+}
+  
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}

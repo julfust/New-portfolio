@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Authentication - Firebase Playground</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+</head>
+<body>
+<script>window.location.protocol !== 'http:' && document.write('<div class="alert alert-danger mb-0"><b>Attention ! Vous visitez cette page depuis l\'adresse « '+ window.document.URL +' »</b> !<br>Vous devriez utiliser un serveur web HTTP local (localhost) !<br>Pour lancer un serveur web local, ouvrez votre terminal et tapez la commande : <b>npm start</b></div>');</script>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">🔥 &laquo; Retour</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+</header>
+
+<main class="container mt-3">
+    <h1>Authentication <small>- Firebase Playground</small></h1>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="mb-4">Connexion sociale</h2>
+            <input type="button" class="btn btn-dark" id="loginButtonGithub" value="Connexion Github">
+            <input type="button" class="btn btn-danger" id="loginButtonGoogle" value="Connexion Google">
+        </div>
+        <div class="col-md-6">
+            <h2 class="mb-4">Connexion par compte</h2>
+            <form class="col col-md-6" id="loginForm">
+                <div class="form-group">
+                    <label for="emailField">Email</label>
+                    <input type="email" class="form-control" id="emailField" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="passwordField">Mot de passe</label>
+                    <input type="password" class="form-control" id="passwordField" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary">Se connecter</button>
+            </form>
+        </div>
+    </div>
+    <hr>
+
+    <section id="results">
+        <!-- Résultat de l'authentification à placer ici ... -->
+    </section>
+</main>
+
+<!-- jQuery et Bootstrap-->
+<script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://unpkg.com/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+
+<!-- SDK Firebase -->
+<script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
+<script src="authentication.js" type="module"></script>
+
+</body>
+</html>

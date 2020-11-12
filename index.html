@@ -3,140 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/lib/fullpage/fullpage.css">
+    <title>Fustier Julien</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets/img/favico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/img/favico//apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./assets/img/favico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/favico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/img/favico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/img/favico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/img/favico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/img/favico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./assets/img/favico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/img/favico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favico/favicon-16x16.png">
+    <link rel="manifest" href="./assets/img/favico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./assets/img/favico/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta name="Content-Type" content="UTF-8">
+    <meta name="Content-Language" content="en">
+    <meta name="Description" content="Hello my name is Julien Fustier and I'm a front-end developer. This is my website/portfolio, here you can see my work, my project and some informations about me, my profil, my skills and my experiences.">
+    <meta name="Keywords" content="portfolio developer front-end HTML CSS SASS Javascript framework library framework Bootstrap React Angular Vue WebGl Three.js Jquery firebase cross-platfrom google firefox opera edge explorer design UX UI responsive SEO ">
+    <meta name="Subject" content="Portfolio">
+    <meta name="Author" content="Fustier Julien">
+    <meta name="Publisher" content="Fustier Julien">
+    <meta name="Identifier-Url" content="https://portfolio-julienf.000webhostapp.com/">
+    <meta name="Reply-To" content="jfustier42@gmail.com">
+    <meta name="Revisit-After" content="15 days">
+    <meta name="Robots" content="all">
+    <meta name="Rating" content="general">
+    <meta name="Distribution" content="global">
+    <meta name="Geography" content="Villiers-sur-Marne, France, 94350">
+    <meta name="Category" content="internet">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://portfolio-julienf.000webhostapp.com/">
+    <meta property="og:title" content="Meta Tags — Preview, Edit and Generate">
+    <meta property="og:description" content="Hello my name is Julien Fustier and I'm a front-end developer. This is my website/portfolio, here you can see my work, my project and some informations about me, my profil, my skills and my experiences.">
+    <meta property="og:image" content="https://portfolio-julienf.000webhostapp.com/assets/img/opengraph.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://portfolio-julienf.000webhostapp.com/">
+    <meta property="twitter:title" content="Meta Tags — Preview, Edit and Generate">
+    <meta property="twitter:description" content="Hello my name is Julien Fustier and I'm a front-end developer. This is my website/portfolio, here you can see my work, my project and some informations about me, my profil, my skills and my experiences.">
+    <meta property="twitter:image" content="https://portfolio-julienf.000webhostapp.com/assets/img/opengraph.png">
+
+    <link rel="stylesheet" href="./assets/style/reset.css">
+    <link rel="stylesheet" href="./assets/style/fullpage.css">
     <link rel="stylesheet" href="./assets/style/style.css">
 </head>
 <body>
-    <div id="fullpage">
-        <div class="section">
-            <div class="container-section1">
-                <canvas class="home-logo"></canvas>
-                <article class="home-article">
-                    <div class="text-container">
-                        <p>Hi my name is Julien Fustier</p>
-                        <p>and I'm a Front-End developpeur</p>
-                        <p>Let me show you...</p>
-                    </div>
-                    <div class="typed-text-container">
-                        <p><span class="typed-text1"></span></p>
-                        <p><span class="typed-text2"></span></p>
-                        <p><span class="typed-text3"></span></p>
-                    </div>
+    <nav class="fullpage-navigation">
+        <ul class="fullpage-navigation__list list">
+            <li class="list__item"><a href="#Home">Home</a></li>
+            <li class="list__item"><a href="#Profil">Who am I</a></li>
+            <li class="list__item"><a href="#Experience">Experience</a></li>
+            <li class="list__item"><a href="#Project">Project</a></li>
+        </ul>
+    </nav>
+
+    <div class="fullpage">
+        
+        <div class="section home-section">
+            <canvas class="home-section__logo"></canvas>
+
+            <article class="home-section__article presentation-article">
+                <div class="presentation-article__text">
+                    <p>Hi! My name is Julien Fustier</p>
+                    <p>and I'm a Front-End developer</p>
+                    <p>Let me show you...</p>
+                    <p>Scroll down</p>
+                </div>
+            </article>
+        </div>
+
+        <div class="section profil-section">
+            <div class="profil-section__spotlight spotlight"></div>
+
+            <main class="profil-section__main-content profil-prev">
+                <nav class="profil-prev__navigation nav-bar">
+                    <label for="display-button" class="nav-bar__label">&#9776</label>
+                    <input type="checkbox" class="nav-bar__display-button" id="display-button" />
+
+                    <ul class="nav-bar__list list">
+                        <li class="list__item item router-link" data-location="./router/profil.html">
+                            <div class="item__overground overground1"></div>
+                            <h1 class="item__title title1">PROFIL</h1>
+                        </li>
+                        <li class="list__item item router-link" data-location="./router/skills.html">
+                            <div class="item__overground overground2"></div>
+                            <h1 class="item__title title2">SKILLS</h1>
+                        </li>
+                        <li class="list__item item router-link" data-location="./router/experiences.html">
+                            <div class="item__overground overground3"></div>
+                            <h1 class="item__title title3">BACKGROUND</h1>
+                        </li>
+                        <li class="list__item item router-link" data-location="./router/passions.html">
+                            <div class="item__overground overground4"></div>
+                            <h1 class="item__title title4">HOBBIES</h1>
+                        </li>
+                    </ul>
+                </nav>
+                <section class="profil-prev__screen black-screen">
+                    <article class="black-screen__content content1">
+                        <h2 class="content1__title blinking-text">Are you looking for a front-end developer ?</h2>
+                        <p class="content1__text blinking-text">Do you need :</p>
+                        <ul class="content1__list list blinking-text">
+                            <li class="list__item blinking-text">A reliable and sociable developer familiar with team work ?</li>
+                            <li class="list__item blinking-text">Confortable with HTML, CSS, Javascript (including libraries and framework) ?</li>
+                            <li class="list__item blinking-text">Who as knowledge in cross platform development ?</li>
+                            <li class="list__item blinking-text">Passionate about design, familiar with user interface, responsive and adaptative conception ?</li>
+                            <li class="list__item list__item--cursor blinking-text">Concerned with ensuring optimisation and SEO</li>
+                        </ul>
+
+                        <button class="content1__button blinking-text"><a href="mailto:jfustier42@gmail.com">Contact Me</a></button>
+                    </article>
+                </section>
+            </main>
+        </div>
+
+        <div class="section experience-section">
+            <div class="slide experience-section__slide1 slide-company">
+                <header class="slide-company__title">
+                    <h1>My first-year internship</h1>
+                </header>
+
+                <article class="slide-company__description article">
+                    <div class="article__picture"><img data-src="./assets/img/experience/CGV.jpg" alt="Conseil général de Val-de-Marne"></div>
+                    <p class="article__text">To validate my first year I had to complete a two-week internship. I choose to work in a public company : "le conseil général du val de marne". It was a great opportunity to see the company’s activities and his interactions, discover the job of web developer and improve my skills in front-end developement (HTML, CSS and Javascript)</p>
                 </article>
-                <iframe class="arrow arrow1" src="./fleche2.svg" width="40" height="40">
-                    <img src="./fleche2.png" alt="une fleche">
-                </iframe>
+            </div>
+
+            <div class="slide experience-section__slide2 slide-work">
+                <header class="slide-work__title">
+                    <h1>My final project</h1>
+                </header>
+
+                <article class="slide-work__description article">
+                    <div class="article__gallery gallery">
+                        <div class="gallery__picture"><img data-src="./assets/img/experience/old-gip.jpg" alt="old Gip interface" /></div>
+                        <div class="gallery__icon">
+                            <iframe src="./assets/img/experience/arrow1.svg">
+                                <img data-src="./assets/img/experience/arrow1.png" alt="arrow icon" />
+                            </iframe>
+                            <iframe src="./assets/img/home/arrow2.svg">
+                                <img data-src="./assets/img/home/arrow2.png" alt="arrow icon" />
+                            </iframe>
+                        </div>
+                        <div class="gallery__picture"><img data-src="./assets/img/experience/new-gip.jpg" alt="new Gip interface" /></div>
+                    </div>
+                    <p class="article__text">Durring these two weeks, I also had the chance to took part in a important project of the company. When I arrived the team was already working on the update of an aplication wich was no longer adapted to the changing needs of the company and had major functional problems. My manager had instructed me to develop the front part of the home page. It allows me to develop my knowledge in HTML, CSS, Javscript and also discover new domains by using for the first time a framework : Bootstrap. I realised how rich and complex the world of web development is.</p>
+                    <button class="article__link"><a href="./projet/Gip/View43.html">See my work</a></button>
+                </article>
             </div>
         </div>
-        <div class="section">
-            <div class="container-section2">
-                <nav class="topic-menu">
-                    <div class="topic-menu__section">
-                        <div class="section__overground bar-1"></div>
-                        <div class="section__background bar-1"><a class="background__router-link" data-file-link="./assets/black-screen-router/competence.html"><h1 class="link__title title1" title="Compétence">Compétence</h1></a></div>
+
+        <div class="section project-section">
+            <div class="slide project-section__slide1 slide-main-project">
+                <header class="slide-main-project__title title">
+                    <div class="title__overground overground5"></div>
+                    <p class="title__text paragraph1">I design and develop web site</p>
+                </header>
+
+                <section class="slide-main-project__container container">
+                    <div class="container__item project-item" data-location="global-magazine">
+                        <h1 class="project-item__title">Global magazine</h1>
+                        <div class="project-item__picture"><img data-src="./assets/img/projet/global-magazine.jpg" alt="logo Global magazine"></div>
                     </div>
-                    <div class="topic-menu__section">
-                        <div class="section__overground bar-2"></div>
-                        <div class="section__background bar-2"><a class="background__router-link" data-file-link="./assets/black-screen-router/technologie.html"><h1 class="link__title title2" title="Technologie">Technologie</h1></a></div>
-                    </div>
-                    <div class="topic-menu__section">
-                        <div class="section__overground bar-3"></div>
-                        <div class="section__background bar-3"><a class="background__router-link" data-file-link="./assets/black-screen-router/parcours.html"><h1 class="link__title title3" title="Parcours">Parcours</h1></a></div>
-                    </div>
-                    <div class="topic-menu__section">
-                        <div class="section__overground bar-4"></div>
-                       <div class="section__background bar-4"><a class="background__router-link" data-file-link="./assets/black-screen-router/passion.html"><h1 class="link__title title4" title="Passion">Passion</h1></a></div>
-                    </div>
-                </nav>
-        
-                <section class="topic-screen">
-                    <div class="topic-screen__content0">
-                        <p class="content0--article">It was this howling and firing of the guns at Ripley and St. George's Hill that we had heard at Upper Halliford. The Ripley gunners, unseasoned artillery volunteers who ought never to have been placed in such a position, fired one wild, premature, ineffectual volley, and bolted on horse and foot through the deserted village, while the Martian, without using his Heat-Ray, walked serenely over their guns, stepped gingerly among them, passed in front of them, and so came unexpectedly upon the guns in Painshill Park, which he destroyed.</p>
-                        <p class="content0--footer">H. G. Wells - The War of the Worlds, Chapter 15 lorem</p>
+                    <div class="container__item project-item" data-location="kwick">
+                        <h1 class="project-item__title">Kwick</h1>
+                        <div class="project-item__picture"><img data-src="./assets/img/projet/kwick.jpg" alt="logo Kwick"></div>
                     </div>
                 </section>
-            </div> 
-        </div>
-        <div class="section">
-            <div class="slide" data-anchor="slide1">
-                <div class="container1-section3">
-                    <div class="heading-title">
-                        <h1><span class="typed-text4"></span></h1>
+
+                <section class="slide-main-project__container container">
+                    <div class="container__item project-item" data-location="steel-ball-run">
+                        <h1 class="project-item__title">Steel ball run</h1>
+                        <div class="project-item__picture"><img data-src="./assets/img/projet/steel-ball-run.jpg" alt="logo Steel ball run"></div>
                     </div>
-                    <div class="entreprise-description">
-                        <div class="description__picture"></div>
-                        <div class="description__text"></div>
+                    <div class="container__item project-item" data-location="Manage-SCH">
+                        <h1 class="project-item__title">Manage SCH</h1>
+                        <div class="project-item__picture"><img data-src="./assets/img/projet/manage-sch.jpg" alt="logo Manage SCH"></div>
                     </div>
-                </div>
+                </section>
             </div>
-            <div class="slide" data-anchor="final-project">
-                <div class="container2-section3">
-                    <div class="heading-title">
-                        <h1><span class="typed-text5"></span></h1>
-                    </div>
-                    <div class="project-description">
-                        <div class="description__picture"></div>
-                        <iframe class="arrow arrow2" src="./fleche1.svg" width="200" height="200">
-                            <img src="./fleche1.png" alt="une fleche">
-                        </iframe>
-                        <div class="description__picture"></div>
-                    </div>
-                    <div class="description__text"></div>
-                </div>
+
+            <div class="slide slide-other-project">
+                <header class="slide-other-project__title">
+                    <h1>Other projects</h1>
+                </header>
+
+                <main class="slide-other-project__main-content container">
+                    <section class="container__section project-section">
+                        <div class="project-section__title title">
+                            <div class="title__picture title__picture--1"><img data-src="./assets/img/projet/webGl-logo.png" alt="Web GL logo" /></div>
+                            <h2 class="title__text">Web GL</h2>
+                        </div>
+                        <ul class="project-section__list list">
+                            <li class="list__item other-poject-item" data-location="Divers/Web-GL/City">City</li>
+                            <li class="list__item other-poject-item" data-location="Divers/Web-GL/Galaxy">Galaxy</li>
+                            <li class="list__item other-poject-item" data-location="Divers/Web-GL/Planete">Planete</li>
+                            <li class="list__item other-poject-item" data-location="Divers/Web-GL/Birthday-cake">Cake</li>
+                        </ul>
+                    </section>
+                    <section class="container__section project-section">
+                        <div class="project-section__title title">
+                            <div class="title__picture title__picture--2"><img data-src="./assets/img/projet/firebase-logo.png" alt="Firebase logo" /></div>
+                            <h2 class="title__text">Firebase</h2>
+                        </div>
+                        <ul class="project-section__list list">
+                            <li class="list__item other-poject-item" data-location="Divers/firebase/authentification">Authentification</li>
+                            <li class="list__item other-poject-item" data-location="Divers/firebase/realtime-database">Real time database</li>
+                            <li class="list__item other-poject-item" data-location="Divers/firebase/storage">Storage</li>
+                        </ul>
+                    </section>
+                </main>
             </div>
         </div>
-        <div class="section">
-                <div class="slide" data-anchor="slide1">
-                    <div class="container1-section4">
-                        <div class="heading-title">
-                            <div class="heading-title__overground"></div>
-                            <p class="heading-title__content">I design and develop: <span class="heading-title__content--scramble title5">Things</span></p>
-                        </div>
-                        <div class="project-container">
-                            <div class="project-item 0">
-                                <h2 class="project-item__title">Global Magazine</h2>
-                                <div class="project-item__picture">
-                                    <img src="./assets/img/global-magazine.jpg" alt="image global magazine">
-                                </div>
-                            </div>
-                            <div class="project-item 1">
-                                <h2 class="project-item__title">Kwick</h2>
-                                <div class="project-item__picture">
-                                    <img src="./assets/img/kwick.jpg" alt="image kwick">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-container">
-                            <div class="project-item 2">
-                                <h2 class="project-item__title">Steel Bal Run</h2>
-                                <div class="project-item__picture">
-                                    <img src="./assets/img/space-run.jpg" alt="image steel bal run">
-                                </div>
-                            </div>
-                            <div class="project-item 3">
-                                <h2 class="project-item__title">Manage sch</h2>
-                                <div class="project-item__picture">
-                                    <img src="./assets/img/manage-sch.jpg" alt="image manage-sch">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            <div class="slide" data-anchor="slide2"></div>
-        </div>
+
     </div>
 
-    <ul id="myMenu">
-        <li data-menuanchor="firstPage" class="active"><a href="#firstPage">First section</a></li>
-        <li data-menuanchor="secondPage"><a href="#secondPage">Second section</a></li>
-        <li data-menuanchor="thirdPage"><a href="#thirdPage">Third section</a></li>
-        <li data-menuanchor="fourthPage"><a href="#fourthPage">Fourth section</a></li>
-    </ul>
-
-    <script type="text/javascript" src="./assets/lib/fullpage/fullpage.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" ></script>
-    <script src="assets/lib/typed/typed.min.js"></script>
-    <script type="module" src="./assets/js/app.js"></script>
+    <script src="./assets/lib/fullpage.min.js"></script>
+    <script src="./assets/lib/gsap.min.js"></script>
+    <script type="module" src="./assets/script/app.js"></script>
 </body>
 </html>

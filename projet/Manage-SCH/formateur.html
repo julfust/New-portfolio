@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ecole Multimedia</title>
+    <link rel="stylesheet" href="assets/css/formateur.css">
+</head>
+<body>
+    <section id="formateur-space-ctnr">
+
+        <header>
+            <div id="profil-ctnr">
+                <img src="./assets/img/user-img.jpg" alt="" id="profil-img">
+                <p id="profil-name"></p>
+            </div>
+            <img src="assets/img/Ecole-Multimedia.jpg" alt="logo-ecole" id="img-main-page"  />
+            <button id="btn-logout"><a href="index.html">Déconnexion</a><i class="fas fa-power-off"></i></button>
+        </header>
+    
+        <div id="body-title-ctnr">
+            <h1>Espace Formateur</h1>
+        </div>
+    
+        <nav>
+            <div id="classroom-section-title"><h3 id="class-title"><i class="fas fa-chalkboard-teacher"></i> FIDEV2</h3></div>
+            <div id="planning-section-title"><h3><i class="fas fa-calendar-week"></i>Planning</h3></div>
+            <div id="report-section-title"><h3><i class="fas fa-user-clock"></i>Absence/retard</h3></div>
+        </nav>
+    
+    <div id="classroom-section" style="display: block">
+            
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom et prénom</th>
+                    <th>Télèphone</th>
+                    <th>Sexe</th>
+                    <th>Abscence-Présence-Retard</th>
+                </tr>
+            </thead>
+
+            <tbody id="student">
+
+            </tbody>
+        </table>  
+
+    </div>
+
+        <div id="planning-section" style="display: none">
+            <div id="planning-button-container">
+                <button id="previous-date">Précedent</button><button id="next-date">Suivant</button>
+            </div>
+            <table id="planning">
+        
+            </table>
+        </div>
+
+        <div id="report-section" style="display: none">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Nom et prénom</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+    
+                <tbody id="student-absente">
+
+                </tbody>
+
+                <tbody id="student-late">
+
+                </tbody>
+            </table>
+        </div>
+
+    <script src="assets/lib/all.min.js"></script>
+    <script src="assets/lib/jquery-1.11.2.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-database.js"></script>
+    <script src="assets/js/formateur.js"></script>   
+</body>
+</html>

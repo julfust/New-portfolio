@@ -1,0 +1,1152 @@
+@font-face{
+    font-family: "Gudea";
+    src: url('../font/Gudea-Regular.ttf');
+
+}
+
+@font-face{
+    font-family: 'Gudea Bolt';
+    src: url('../font/Gudea-Bold.ttf');
+}
+
+@font-face{
+    font-family: 'Gudea Italic';
+    src: url('../font/Gudea-Italic.ttf');
+}
+
+body{
+    margin: 0%;
+    padding: 0%;
+    font-family:'Gudea';
+}
+
+/* Partie 1: Haut de page (header et nav barre) */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2d314e;
+}
+
+#profil-ctnr{
+    display: flex;
+    padding: 15px;
+}
+
+#profil-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#profil-name{
+    font-family: 'Gudea Bolt';
+    color: #F7F7F2;
+}
+
+#img-main-page{
+    width: auto;
+    height: 100px;
+}
+
+#btn-logout{
+    background-color: #2d314e;
+    display: flex;
+    margin-right: 2%;
+    align-items: center;
+    width: 120px;
+    height: 50px;
+    color: #F7F7F2;
+    padding: 2.5px;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    margin-bottom: 15px;
+}
+
+#btn-logout a{
+    margin-right: 10px;
+    margin-left: 5px;
+    font-size: 19px;
+    text-decoration: none;
+    color: #F7F7F2;
+}
+
+#btn-logout:hover{
+    cursor:pointer;
+    background-color: #2d314e;
+    color: #eb2a5c;
+    transition-duration: 0.8s;
+}
+
+#body-title-ctnr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#body-title-ctnr h1{
+    font-size: 45px;
+    color: #2d314e;
+    margin-top: 30px;
+    font-family: 'Gudea Bolt';
+}
+
+/* Bouton classe et planning */
+
+nav{
+    width: 20%;
+    display: flex;
+    align-items: flex-end;
+    margin-left: 1.1%;
+    margin-bottom: -40px;
+    margin-top: 5%;
+}
+
+nav > div{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#classroom-section-title{
+    height: 50px;
+    background-color: #f1f1f1;
+    color: #2d314e;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#classroom-section-title:hover{
+    cursor:pointer;
+    background-color: #2d314e;
+    color: #eb2a5c;
+    transition-duration: 0.5s;
+}
+
+
+#planning-section-title{
+    background-color: #f1f1f1;
+    color: #2d314e;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#planning-section-title:hover{
+    cursor:pointer;
+    background-color: #2d314e;
+    color: #eb2a5c;
+    transition-duration: 0.5s;
+}
+
+nav > div > h3{
+    display: flex;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 1.4em;
+}
+
+nav > div > h3 > svg{
+    margin-right: 10%;
+}
+
+
+
+/* Partie 2: Section centrale (tableau classe et planning) */
+/* Tableau centrale (style commun aux deux tableaux) */
+table{
+    width: 98%;
+    margin: 2% auto 2% auto;
+    border-collapse: collapse;
+    background-color: #f1f1f1;
+    color: #eb2a5c;
+}
+
+tr{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 1.6em;
+    color: #2d314e;
+    width: 100%;
+}
+
+td, th{
+    width: 100%;
+    border: 1px solid #F7F7F2;
+}
+
+th{
+    color: #2d314e;
+    font-family: 'Gudea Italic';
+    padding: 1%;
+}
+
+td{
+    padding-top: 3%;
+    padding-bottom: 10px;
+}
+
+.delete-teacher-button{
+    background-color: #F1F1F1;
+    width: 40px;
+    color: #2d314e;
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+
+.delete-teacher-button:hover{
+    background-color: #f1f1f1;
+    color: #eb2a5c;
+    transition-duration: 0.5s;
+    cursor: pointer; 
+}
+
+.teacher-modif-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.teacher-modif-form > p{
+    margin: 0px;
+}
+
+.teacher-modif-form > input
+{
+    width: 50%;
+    margin-bottom: 2%;
+    margin: 15px 0;
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+
+.teacher-modif-form > button
+{
+    margin-bottom: 10%;
+    background-color: #F1F1F1;
+    width: 120px;
+    color: #2d314e;
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+}
+
+.teacher-modif-form > button:hover{
+    background-color: #f1f1f1;
+    color: #eb2a5c;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.delete-user-button{
+    background-color: #F1F1F1;
+    width: 40px;
+    color: #2d314e;
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+
+.delete-user-button:hover{
+    background-color: #f1f1f1;
+    color: #eb2a5c;
+    transition-duration: 0.5s;
+    cursor: pointer; 
+}
+
+.modif-form
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modif-form > select
+{
+    width: 50%;
+    margin-top: 2%;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    overflow: hidden;
+    -moz-appearance: none;
+    appearance: none;
+
+}
+
+.modif-form select{
+    border: none;
+}
+
+.modif-form  option{
+    border: none;
+}
+
+.modif-form > select:after{
+
+    border: solid transparent;
+    border-color: #f1f1f1;
+}
+
+.modif-form > select:focus{
+    outline: none;
+}
+
+.modif-form > input
+{
+    width: 50%;
+    margin-bottom: 2%;
+    margin: 15px 0;
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+
+.modif-form > button
+{
+    margin-bottom: 10%;
+    background-color: #F1F1F1;
+    width: 120px;
+    color: #2d314e;
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+}
+
+.modif-form > button:hover{
+    background-color: #f1f1f1;
+    color: #eb2a5c;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.modif_form
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modif_form > select
+{
+    width: 50%;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+.modif_form > input
+{
+    width: 50%;
+    margin-bottom: 2%;
+}
+
+.modif_form > button
+{
+    margin-bottom: 10%;
+}
+
+
+/* Partie 3: Section de bas de page: (Formulaire choix de classe et ajout d'utilisateur) */
+#bottom-section
+{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%;
+}
+
+
+/* Liste de selection des classe (menu deroulant) */
+.dropdown-container 
+{
+    height:100%;
+    width:100%;
+}
+
+.dropdown 
+{
+    width: 100%;
+    margin-left: 5%;
+    z-index:1;
+    position:relative;
+    display: inline-block;
+}
+
+.dropdown-title
+{
+    display: flex;
+    justify-content: space-between;
+    padding:10px;
+    background:white;
+    position:relative;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+}
+
+.dropdown input:after 
+{
+    content:"";
+    width:100%;
+    height:2px;
+    position:absolute;
+    display:block;
+    background:#C63D0F;
+    bottom:0;
+    left:0;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition-duration: 0.2s;
+    -webkit-transform: scaleX(0);
+    -webkit-transform-origin: bottom left;
+    -webkit-transition-duration: 0.2s;
+}
+
+.dropdown input 
+{
+    top:0;
+    opacity:0;
+    display:block;
+    padding:0;
+    margin:0;
+    border:0;
+    position:absolute;
+    height:100%;
+    width:100%;
+}
+
+.dropdown input:hover 
+{
+    cursor:pointer;
+}
+.dropdown input:hover ~ .dropdown-title 
+{
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+}
+
+.dropdown input:checked:after 
+{
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+}
+
+.dropdown input:checked ~ .dropdown-list-container
+{
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+}
+
+.dropdown-title span 
+{
+    color:#C63D0F;
+}
+
+.dropdown-list-container
+{
+    width: 99.5%;
+    display:block;
+    position: absolute;
+    background:white;
+    height:auto;
+    transform: scaleY(0);
+    transform-origin: top left;
+    transition-duration: 0.2s;
+    -webkit-transform: scaleY(0);
+    -webkit-transform-origin: top left;
+    -webkit-transition-duration: 0.2s;
+}
+
+.dropdown-list-container ul 
+{
+    margin:0;
+    padding:0;
+    list-style-type: none;
+}
+
+.dropdown-list-container li 
+{
+    text-align: justify;
+    margin-bottom:5px;
+    word-break: keep-all;
+    white-space:nowrap;
+    display:block;
+    position:relative;
+}
+
+.list-item-container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-item-container > .list-item-title 
+{
+    width: 80%;
+    position:relative;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    padding:5px;
+    background:white;
+    color:#C63D0F;
+}
+
+.list-item-container > .list-item-title:hover:before 
+{
+    transform:scaleX(1);
+    -webkit-transform:scaleX(1);
+}
+
+.list-item-container > .list-item-title:hover 
+{
+    color:white;
+    background:#C63D0F;
+    transition-duration: 0.5s;
+}
+
+.list-item-logo > svg:hover
+{
+    background: #C63D0F;
+    transition-duration: 0.5s;
+}
+
+/* Gestion des erreurs de formulaire: A developper*/
+h4[id*="error-title"]
+{
+    color: red;
+    display: none;
+}
+
+/* Formulaire pour ajouter une classe */
+#class-section
+{
+    width: 20%;
+    height: 50px;
+    margin-right: 2%;
+}
+
+#new-class-form
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 92%;
+    margin-left: 5%;
+}
+
+#new-class-form > svg, #user-form-container > svg, #new-teacher-form > svg
+{
+    color: green;
+}
+
+#form-class-error, #form-class-error2{
+    color: red;
+    display: none;
+}
+
+/* Ajouter un formateur */
+/* Second dropdown */
+.dropdown-professeur
+{
+    margin-right: 1%;
+}
+
+.dropbtn-professeur
+{
+    background-color: #eb2a5c;
+    width: 150px;
+    color: #F7F7F2;
+    margin-right: 170px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border: 1px solid #F7F7F2;
+    border-radius: 2px;
+    margin-bottom: 15px;
+}
+
+.dropbtn-professeur > p{
+    text-decoration: none;
+    color: #F7F7F2;
+    margin: 0;
+}
+
+.dropbtn-professeur:hover 
+{
+    background-color: #2d314e;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.dropdown-content-professeur 
+{
+    display: none;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 200%;
+}
+
+.show-prof-form
+{
+    display:block;
+    width: 350px;
+}
+
+#new-teacher-form
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F1F1F1;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    text-align: center;
+}
+
+#name{
+    margin: 15px 0;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+
+#teacher-pseudo{
+    margin: 15px 0;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+
+#teacher-password{
+    margin: 15px 0;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+
+#teacher-password-confirm{
+    margin: 15px 0;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+
+#submit-new-prof
+{
+    background-color: #eb2a5c;
+    width: 120px;
+    color: #F7F7F2;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border: 1px solid #F7F7F2;
+    border-radius: 2px;
+    margin-bottom: 15px;
+}
+
+#submit-new-prof:hover{
+    background-color: #2d314e;
+    color: #eb2a5c;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+/* Formulaire pour ajouter un élève */
+/* Second dropdown */
+.dropdown-user
+{
+    margin-right: 1%;
+}
+
+.dropbtn 
+{
+    background-color: #eb2a5c;
+    width: 120px;
+    color: #F7F7F2;
+    margin-right: 300px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border: 1px solid #F7F7F2;
+    border-radius: 2px;
+    margin-bottom: 15px;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn > p{
+    text-decoration: none;
+    color: #F7F7F2;
+    margin: 0;
+}
+
+.dropbtn:hover 
+{
+    background-color: #2d314e;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.dropdown-content 
+{
+    display: none;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 200%;
+}
+
+.show 
+{
+    display:block;
+    width: 350px;
+}
+
+#user-form-container
+{
+    text-align: center;
+}
+
+#user-form-container > h3 > svg
+{
+    margin-right: 2%;
+    color: green;
+}
+
+#new-user-form
+{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: auto;
+    text-align: center;
+}
+
+#new-user-form > h3
+{
+    margin-top: 45px;
+    margin-bottom: 10px;
+}
+
+#new-user-form > h4 {
+    margin-top: 20px;
+}
+
+#new-user-form > button
+{
+    width: 50%;
+    margin: 15% auto 5% auto;
+}
+
+#nom{
+    margin: 15px 0;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+
+#tel{
+    margin: 15px 0;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+
+#pseudo{
+    margin: 15px 0;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+
+#password{
+    margin: 15px 0;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+
+#password_confirm{
+    margin: 15px 0;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+
+#register-student{
+    background-color: #eb2a5c;
+    width: 120px;
+    color: #F7F7F2;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border: 1px solid #F7F7F2;
+    border-radius: 2px;
+    margin-bottom: 15px;
+}
+
+#register-student > p{
+    text-decoration: none;
+    color: #F7F7F2;
+    margin: 0;
+}
+
+#register-student:hover{
+    background-color: #2d314e;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+/* Section planning */
+#planning-button-container
+{
+    display:flex;
+    justify-content: space-between;
+    margin-top: -8%;
+    margin-bottom: 127px;
+}
+
+#planning-button-container > button:nth-child(1)
+{
+    margin-left: 3%;
+}
+
+#planning-button-container > button:nth-child(2)
+{
+    margin-right: 3%;
+}
+
+#previous-date{
+    background-color: #F1F1F1;
+    width: auto;
+    color: #2d314e;
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+
+#previous-date:hover{
+    background-color: #f1f1f1;
+    color: #eb2a5c;
+    transition-duration: 0.5s;
+    cursor: pointer; 
+}
+
+#next-date{
+    background-color: #F1F1F1;
+    width: auto;
+    color: #2d314e;
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+
+#next-date:hover{
+    background-color: #f1f1f1;
+    color: #eb2a5c;
+    transition-duration: 0.5s;
+    cursor: pointer; 
+}
+
+#planning-bottom-section
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+.planning-dropdown-container
+{
+    height: 10%;
+    width: 100%;
+}
+
+.planning-dropdown 
+{
+    width: 100%;
+    margin-left: 5%;
+    z-index:1;
+    position:relative;
+    display: inline-block;
+}
+
+.planning-dropdown input:after 
+{
+    content:"";
+    width:100%;
+    height:2px;
+    position:absolute;
+    display:block;
+    background:#C63D0F;
+    bottom:0;
+    left:0;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition-duration: 0.2s;
+    -webkit-transform: scaleX(0);
+    -webkit-transform-origin: bottom left;
+    -webkit-transition-duration: 0.2s;
+}
+
+.planning-dropdown input 
+{
+    top:0;
+    opacity:0;
+    display:block;
+    padding:0;
+    margin:0;
+    border:0;
+    position:absolute;
+    height:100%;
+    width:100%;
+}
+
+.planning-dropdown input:hover 
+{
+    cursor:pointer;
+}
+
+.planning-dropdown input:hover ~ .planning-dropdown-title
+{
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+}
+
+.planning-dropdown input:checked:after 
+{
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+}
+
+.planning-dropdown input:checked ~ .planning-dropdown-list-container
+{
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+}
+
+.planning-dropdown-title span 
+{
+    color:#C63D0F;
+}
+
+.planning-dropdown-title
+{
+    display: flex;
+    justify-content: space-between;
+    padding:10px;
+    background:white;
+    position:relative;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+}
+.planning-dropdown input:hover ~ .planning-dropdown-title 
+{
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+}
+
+.planning-dropdown-title span 
+{
+    color:#C63D0F;
+}
+
+.planning-dropdown-list-container
+{
+    width: 99.5%;
+    display:block;
+    position: absolute;
+    background:white;
+    height:auto;
+    transform: scaleY(0);
+    transform-origin: top left;
+    transition-duration: 0.2s;
+    -webkit-transform: scaleY(0);
+    -webkit-transform-origin: top left;
+    -webkit-transition-duration: 0.2s;
+}
+
+.planning-dropdown-list-container ul 
+{
+    margin:0;
+    padding:0;
+    list-style-type: none;
+}
+
+.planning-dropdown-list-container li 
+{
+    text-align: justify;
+    margin-bottom:5px;
+    word-break: keep-all;
+    white-space:nowrap;
+    display:block;
+    position:relative;
+}
+
+.planning-list-item-container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-classroom-button{
+    background-color: #e2e2e2;
+    width: 40px;
+    color: #2d314e;
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+
+.delete-classroom-button:hover{
+    background-color: #e2e2e2;
+    color: #eb2a5c;
+    transition-duration: 0.5s;
+    cursor: pointer; 
+}
+
+/* Formulaire pour ajouter une classe */
+#planning-class-section{
+    height: 500px;
+}
+
+#planning-new-class-form
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 105%;
+
+    margin-left: 5%;
+}
+
+#planning-new-class-form > svg
+{
+    color: green;
+}
+.dropdown-cours
+{
+    margin-right: 1%;
+}
+
+.dropbtn-cours 
+{
+    background-color: #eb2a5c;
+    width: 120px;
+    color: #F7F7F2;
+    margin-right: 300px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border: 1px solid #F7F7F2;
+    border-radius: 2px;
+    margin-bottom: 15px;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn-cours > p{
+    text-decoration: none;
+    color: #F7F7F2;
+    margin: 0;
+}
+
+.dropbtn-cours:hover 
+{
+    background-color: #2d314e;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content-cours 
+{
+    display: none;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 200%;
+}
+
+.show-cours-form 
+{
+    display: flex;
+    justify-content: center;
+    width: 350px;
+}
+/* Fomulaire pour ajouter un cour sur l'emplois du temps */
+
+#classroom-form{
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #F1F1F1;
+    margin-right: 25px;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+
+#classroom-name{
+    margin: 15px 0;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+
+#teacher-name{
+    margin: 15px 0;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+
+#btn-add-cours{
+    background-color: #eb2a5c;
+    width: 120px;
+    color: #F7F7F2;
+    margin-top: 30px;
+    margin-left: 42px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border: 1px solid #F7F7F2;
+    border-radius: 2px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+#btn-add-cours:hover{
+    background-color: #2d314e;
+    color: #eb2a5c;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}

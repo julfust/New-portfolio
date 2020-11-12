@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ecole Multimédia</title>
+    <link rel="stylesheet" href="assets/css/administrateur.css">
+</head>
+<body>
+    <header>
+        <div id="profil-ctnr">
+            <img src="./assets/img/user-img.jpg" alt="" id="profil-img">
+            <p id="profil-name">Administrateur</p>
+        </div>
+        <img src="assets/img/Ecole-Multimedia.jpg" alt="logo-ecole" id="img-main-page"  />
+        <button id="btn-logout"><a href="index.html">Déconnexion</a><i class="fas fa-power-off"></i></button>
+    </header>
+
+    <div id="body-title-ctnr">
+        <h1>Espace administrateur</h1>
+    </div>
+
+    <nav>
+        <div id="classroom-section-title"><h3 id='class-title'><i class="fas fa-chalkboard-teacher"></i>Classe</h3></div>
+        <div id="planning-section-title"><h3><i class="fas fa-calendar-week"></i>Planning</h3></div>
+    </nav>
+
+    <div id="classroom-section">
+        <section id="middle-section">
+
+            <table id="classroom-table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Nom et prénom</th>
+                        <th>Télèphone</th>
+                        <th>Sexe</th>
+                        <th>Modification</th>
+                    </tr>
+                </thead>
+
+                <tbody id="teacher">
+
+                </tbody>
+
+                <tbody id="student">
+
+                </tbody>
+            </table>
+        </section>
+
+        <section id="bottom-section">
+            <div id="class-section">
+                <div class="dropdown-container">
+                    <div class="dropdown">
+                        <div class="dropdown-title"><span id="dropdown-title-class">Liste des classes</span><i class="fas fa-sort-down"></i></div>
+                        <input type="checkbox">
+                        <div class="dropdown-list-container">
+                            <ul id="dropdown-list">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+          
+                <form id="new-class-form">
+                    <i class="fas fa-plus"></i>
+                    <div>
+                        <input type="text" placeholder="Nouvelle classe" id="class"/>
+                        
+                        <button type="submit">Enregistrer</button>
+                    </div>
+                </form>
+                <h4 id="form-class-error">Veuillez remplir le champs obligatoire</h4>
+                <h4 id="form-class-error2">Veuillez ne pas mettre d'espace</h4>
+
+            </div>
+
+    <div class="dropdown-professeur">
+        <button onclick="dropDownFunctionProfesseur()" class="dropbtn-professeur"><p>Ajouter un formateur</p></button>
+            <div id="myDropdown-professeur" class="dropdown-content-professeur">
+                <form id="new-teacher-form">
+                    
+                    <h4 id="error-title-teacher-form1">Avant d'ajouter un utilisateur, vous devez d'abord selectionner une classe !</h4>
+                    <h4 id="error-title-teacher-form2">L'integralité des champs doit etre remplis, veuillez recommencer !</h4>
+                    <h4 id="error-title-teacher-form3">Les champs de mots de passe ne sont pas identique, veuillez recommencer !</h4>
+                    <h4 id="error-title-teacher-form4">Ces information existent déjà, veuillez en selectionner d'autre!</h4>
+
+                        <h4>Nom</h4>
+                        <input type="text" id="name" />
+
+                        <h4>Pseudo</h4>
+                        <input type="text" id="teacher-pseudo"  />
+
+                        <h4>Mots de passe</h4>
+                        <input type="password" id="teacher-password"  />
+
+                        <h4>Confirmation du mots de passe</h4>
+                        <input type="password" id="teacher-password-confirm" /><br />
+                        <button type="submit" id="submit-new-prof">Enregistrer</button>
+                    </form>
+            </div>
+    </div>
+
+    <div class="dropdown-user">
+        <button onclick="dropDownFunction()" class="dropbtn"><p>Ajouter un élève</p></button>
+            <div id="myDropdown" class="dropdown-content">
+                <div id="user-form-container">
+        
+                    <h4 id="error-title1">Avant d'ajouter un utilisateur, vous devez d'abord selectionner une classe !</h4>
+                    <h4 id="error-title2">L'integralité des champs doit etre remplis, veuillez recommencer !</h4>
+                    <h4 id="error-title3">Les champs de mots de passe ne sont pas identique, veuillez recommencer !</h4>
+        
+                    <form id="new-user-form">
+                        <h3>Information personnelle</h3>
+                        <h4>Nom</h4>
+                        <input type="text" id="nom" />
+        
+                        <h4>Telephone</h4>
+                        <input type="text" id="tel" />
+        
+                        <h4>Sexe</h4>
+                        <div id="radio-container">
+                            <input type="radio" name="sexe" value="Homme" id="Homme" checked/><label for="Homme">Homme</label>
+                            <input type="radio" name="sexe" value="Femme" id="Femme" /><label for="Femme">Femme</label>
+                        </div>
+        
+                        <h3>Identifiant de connexion</h3>
+                        <h4>Pseudo</h4>
+                        <input type="text" id="pseudo" />
+    
+                        <h4>Mots de passe</h4>
+                        <input type="password" id="password" />
+    
+                        <h4>Confirmation du mots de passe</h4>
+                        <input type="password" id="password_confirm" />
+    
+                        <button type="submit" id="register-student"><p>Enregistrer</p></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        </section>
+    </div>
+
+    <div id="planning-section" style="display: none">
+        <div id="planning-button-container">
+            <button id="previous-date">Semaine précedente</button><button id="next-date">Semaine suivante</button>
+        </div>
+        <table id="planning">
+
+        </table>
+
+        <section id="planning-bottom-section">
+            <div id="planning-class-section">
+                <div class="planning-dropdown-container">
+                    <div class="planning-dropdown">
+                        <div class="planning-dropdown-title"><span id="dropdown-title-class-planning">Liste des classes</span><i class="fas fa-sort-down"></i></div>
+                        <input type="checkbox">
+                        <div class="planning-dropdown-list-container">
+                            <ul id="planning-dropdown-list">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="planning-new-class-form">
+                    <i class="fas fa-plus"></i>
+                    <div>
+                        <input type="text" placeholder="Nouvelle classe" id="planning-Class"/>
+                        <button type="submit">Enregistrer</button>
+                    </div>
+                </form>
+            </div>
+
+    <div class="dropdown-cours">
+        <button onclick="dropDownFunctionCours()" class="dropbtn-cours"><p>Ajouter un cours</p></button>
+            <div id="myDropdown-cours" class="dropdown-content-cours">
+            <form id="classroom-form">
+                <h4 id="error-title-classroom-form1" style="display: none; color: red;">Avant d'ajouter un utilisateur, vous devez d'abord selectionner une classe !</h4>
+                <h4 id="error-title-classroom-form2" style="display: none; color: red;">L'integralité des champs doit etre remplis, veuillez recommencer !</h4>
+                <h3>Nom du cour</h3>
+                <input type="text" id="classroom-name"  />
+
+                <h3>Professeur</h3>
+                <input type="text" id="teacher-name"  />
+
+                <h3>Date</h3>
+                <select id="date-selected">
+
+                </select>
+
+                <h3>Plage horraire</h3>
+                <select id="hour-select">
+                    <option value="morning">Matin</option>
+                    <option value="afternoon">Après-midi</option>
+                    <option value="day">Journée entière</option>
+                </select>
+
+                <button type="submit" id="btn-add-cours">Enregistrer</button>
+            </form>
+        </section>
+    </div>
+    </div>
+
+    <script src="assets/lib/all.min.js"></script>
+    <script src="assets/lib/jquery-1.11.2.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-database.js"></script>
+    <script src="assets/js/administrateur.js"></script>
+</body>
+</html>

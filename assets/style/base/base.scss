@@ -1,3 +1,81 @@
-.fp-tableCell{
-    vertical-align: unset;
+@font-face {
+    font-family: 'Futured';
+    src: url('./../font/Futured.eot');
+    src: url('./../font/Futured.eot?#iefix') format('embedded-opentype'),
+        url('./../font/Futured.woff2') format('woff2'),
+        url('./../font/Futured.woff') format('woff'),
+        url('./../font/Futured.ttf') format('truetype'),
+        url('./../font/Futured.svg#Futured') format('svg');
+}
+
+@font-face {
+    font-family: 'Fira Mono';
+    src: url('./../font/FiraMono-Regular.eot');
+    src: url('./../font/FiraMono-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./../font/FiraMono-Regular.woff2') format('woff2'),
+        url('./../font/FiraMono-Regular.woff') format('woff'),
+        url('./../font/FiraMono-Regular.ttf') format('truetype'),
+        url('./../font/FiraMono-Regular.svg#FiraMono-Regular') format('svg');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-size: 2vw;
+    color: red;
+
+    .fullpage-navigation {
+        width: 80vw;
+        position: absolute;
+        top: 2.5vh;
+        left: 10vw;
+        z-index: 1;
+
+        .list {
+            width: 80vw;
+            display: flex;
+            justify-content: space-between;
+            &__item {
+                width: 10vw;
+                font-size: 2vw;
+                text-align: center;
+                transition: transform 400ms;
+
+                &:hover {
+                    transform: scale(1.3);
+
+                    & > a {
+                        color: $color-secondary;
+                    }
+                }
+
+                @include mobile_layout {
+                    width: 18vw;
+                    font-size: 4vw;
+                }
+
+                & > a {
+                    font-family: 'Futured', Arial, Helvetica, sans-serif;
+                    color: $color-primary;
+                    text-decoration: none;
+                    transition: color 400ms;
+                }
+            }
+        }
+    }
+
+    .fullpage {
+        z-index: 0;
+
+        .fp-slidesNav {
+            width: 4.5vw;
+
+            span {
+                background: $color-secondary;
+            }
+        }
+    }
 }

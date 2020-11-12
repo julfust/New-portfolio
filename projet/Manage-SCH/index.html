@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ecole Multimedia</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+    <section id="sign-in-main-ctnr">
+        <div id="sign-in-ctnr">
+            <h1>ManageSch</h1>
+            <h4 id="error-login">Erreur: identifiant ou mots de passe incorrect</h4>
+            <form>
+                <input type="text" id="sign-in-identifiant" placeholder="  User name">
+                <input type="password" id="sign-in-mdp" placeholder="  Password">							
+                <button id="sign-in-to-chat" type="submit"><p>Login</p></button>
+                <p>Admin id: root / password: root</p>
+            </form>
+        </div>
+    </section>
+    <script src="assets/lib/jquery-1.11.2.min.js"></script>
+    <script src="assets/lib/all.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-database.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,619 @@
+@font-face{
+    font-family: "GeosansLight";
+    src: url("../assets/fonts/GeosansLight.ttf");
+}
+
+h1, h2, h3{
+    font-family: "GeosansLight", "Arial", Helvetica, sans-serif;
+}
+
+body {
+    margin: 0
+} 
+
+#main-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#header-top {
+    background-color: #353434;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px
+}
+
+ #main-nav-menu {
+    margin: 10px 0
+}
+
+#header-top a {
+    text-decoration: none;
+    color: grey;
+    padding: 3px 7px 3px 5px
+}
+
+#header-top > nav a{
+    text-transform: uppercase;
+    border: 1px solid grey;
+}
+
+#main-nav-menu a {
+    text-transform: uppercase;
+    border-right: 1px solid grey
+}
+
+#main-nav-menu a:last-child {
+    border-right: none
+}
+
+#main-nav-menu-small {
+    display: none;
+}
+
+#s-n-icons {
+    font-size: 26px;
+    margin-right: 6%
+}
+
+#s-n-icons div {
+    background-color: #222222;
+    width: 55px;
+    height: 55px;
+    display: inline-block;
+    margin-left: -6px;
+    text-align: center;
+    line-height: 2.2em
+}
+
+#header-main-title {
+    margin: 45px 0
+}
+
+#header-main-title h1, #header-main-title h5 {
+    text-align: center;
+    margin: 0
+}
+
+#header-main-title h1 {
+    font-size: 70px;
+    text-transform: uppercase
+}
+
+#header-main-title h5 {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: grey
+}
+
+#main-nav-menu {
+    border-top: 1px solid silver;
+    border-bottom: 1px solid silver;
+    display: flex;
+    justify-content: center
+}
+
+#main-nav-menu div {
+    border-right: 1px solid silver;
+    padding: 18px 18px 18px 8px
+}
+
+/*  
+méthode alternative pour faire apparaitre avant un ou une série d' éléments html
+header > nav div:before {
+    content:'\25bc';
+    font-size: 8px;
+    margin-right: 4px;  
+}
+
+
+header > nav div:hover > a {
+    color: orange;
+}
+
+header > nav div:hover:before {
+    content: '';
+}
+*/
+
+
+#main-nav-menu div:first-child {
+    border-left: 1px solid silver
+}
+
+#main-nav-menu a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase
+}
+
+
+#top-actus {
+    display: flex;
+    justify-content: space-between;
+    background-color: #eeeeee;
+    padding: 40px 0;
+}
+
+.top-actus-side {
+    width: 48%;
+    position: relative;
+}
+
+#top-actus > .top-actus-side:first-child {
+    margin-left: 5px;
+    
+}
+
+
+#top-actus > .top-actus-side:first-child img {
+    width: 100%;
+    margin-bottom: -4px;
+}
+
+.black-filter{
+    width: 100%;
+    height: 49%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+}
+
+.top-actus-side > .black-filter:hover{
+    opacity: 0.5;
+}
+
+.actu-content  { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10%;
+    background-color: white;
+}
+
+.actu-content > * {
+    color: grey;
+}
+
+.actu-content > h3 {
+    color: black;
+    font-size: 2.3vw;
+    text-align: center;
+}
+
+.actu-content p {
+    text-align: center;
+    margin-top: 0;
+    font-size: 1.4vw;
+}
+
+.actu-date-and-comments {
+    display: flex;
+    width: 200px;
+    max-width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 80%;
+}
+
+.actu-comments {
+    color: orange;
+}
+
+.actu-content > a, .bottom-actus-item-content a {
+    padding: 10px;
+    border: 1px solid orange;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 25px 0;
+}
+
+.top-actus-right {
+    display: flex;
+    height: 45%;
+}
+
+.top-actus-right:last-child {
+    margin-top: 50px;
+}
+
+.top-actus-right-img {
+    width: 50%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#top-actus-right-img-1 {
+    background-image: url('http://upload.wikimedia.org/wikipedia/commons/8/82/Good_News_First_-promotional-.jpg');
+}
+
+#top-actus-right-img-2 {
+    background-image: url('http://upload.wikimedia.org/wikipedia/commons/8/8d/Women%27s_rights_protest_in_Egypt7.jpg');
+}
+
+.top-actus-right .actu-content {
+    padding: 0;
+    width: 50%;
+}
+
+.top-actus-right p {
+    padding: 0 25px;
+}
+
+
+#middle-article-section {
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#middle-section-main {
+    width: 60%;
+}
+
+#middle-article-section > aside {
+    width: 35%;
+}
+
+#middle-article-section  h2 {
+    background-color: #222;
+    color: white;
+    padding: 5px 0 5px 10px;
+    text-transform: uppercase;
+    font-size: 19px;
+}
+
+#middle-actus-main {
+    display: flex
+}
+
+#middle-actus-main > .actu-content {
+    padding: 0 0 0 30px;
+    width: 60%;
+    align-items: flex-start;
+}
+
+#middle-actus-main > .actu-content h3 {
+    margin-top: 0;
+}
+
+#middle-actus-main > .actu-content p, #middle-actus-main > .actu-content h3 {
+    text-align: left;
+}
+
+#middle-actus-main > .actu-content p {
+    font-size: 18px;
+}
+
+#middle-actus-main-img {
+    margin-left: 5px;
+    height: 300px;
+    width: 400px;
+    background-image: url('../assets/images/midle-actus-main.jpg');
+}
+
+#middle-actus-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 5px;
+}
+
+.middle-actus-bottom-item {
+    width: 50%;
+    height: 120px;
+    margin-top: 60px;
+    display: flex;
+}
+
+.middle-actus-bottom-item-img, .middle-actus-aside-item-img {
+    width: 120px;
+    height: 100%;
+    background-size: cover
+}
+
+.middle-actus-bottom-item-right, .middle-actus-aside-item-right {
+    width: 55%;
+    font-size: 15px;
+    margin-left: 15px
+}
+
+.middle-actus-bottom-item-right > p, .middle-actus-aside-item-right > p {
+    color: orange;
+    margin-top: 0
+}
+
+#middle-actus-bottom 
+.middle-actus-bottom-item:nth-child(1) > 
+.middle-actus-bottom-item-img {
+    background-image: url('../assets/images/middle-actu-bottom-item-2.jpg');
+}
+
+#middle-actus-bottom 
+.middle-actus-bottom-item:nth-child(2) > 
+.middle-actus-bottom-item-img {
+    background-image: url('../assets/images/middle-actu-bottom-item-2.jpg');
+}
+
+#middle-actus-bottom 
+.middle-actus-bottom-item:nth-child(3) > 
+.middle-actus-bottom-item-img {
+    background-image: url('../assets/images/middle-actu-bottom-item-2.jpg');
+}
+
+#middle-actus-bottom 
+.middle-actus-bottom-item:nth-child(4) > 
+.middle-actus-bottom-item-img {
+    background-image: url('../assets/images/middle-actu-bottom-item-2.jpg');
+}
+
+.middle-actus-aside-item {
+    margin: 60px 30px 60px 0;
+    display: flex;
+    height: 120px;
+}
+
+#middle-actus-aside-items 
+.middle-actus-aside-item:nth-child(1) > 
+.middle-actus-aside-item-img {
+    background-image: url('../assets/images/middle-actu-bottom-item-2.jpg');
+}
+
+#middle-actus-aside-items
+.middle-actus-aside-item:nth-child(2) > 
+.middle-actus-aside-item-img {
+    background-image: url('../assets/images/middle-actu-bottom-item-2.jpg');
+}
+
+#middle-actus-aside-items 
+.middle-actus-aside-item:nth-child(3) > 
+.middle-actus-aside-item-img {
+    background-image: url('../assets/images/middle-actu-bottom-item-2.jpg');
+}
+
+#middle-actus-aside-items 
+.middle-actus-aside-item:nth-child(4) > 
+.middle-actus-aside-item-img {
+    background-image: url('../assets/images/middle-actu-bottom-item-2.jpg');
+}
+
+#bottom-actus-section {
+    margin: 50px 0
+}
+/*
+TODO
+*/
+
+input[name="bottom-actus-section-nav"] {
+   width: 110px; 
+   height: 35px;
+   position: relative;
+   opacity: 0;
+}
+
+
+
+#bottom-actus-section > nav {
+    background-color: #222;
+    height: 35px;
+    margin-top: -40px 
+}
+
+#bottom-actus-section input[type="button"] {
+    border: none;
+    color: white;
+    background-color: #222;
+    outline: none;
+    height: 100%;
+    font-size: 19px;
+    width: 110px
+}
+
+.bottom-actus-item {
+    display: none;
+}
+
+#bottom-actus-section > input[value='bottom-actus-press']:checked ~ nav > #bottom-actus-press-btn,
+#bottom-actus-section > input[value='bottom-actus-actus']:checked ~ nav > #bottom-actus-actus-btn, 
+#bottom-actus-section > input[value='bottom-actus-infos']:checked ~ nav > #bottom-actus-infos-btn
+{
+    background-color: orange;
+}
+
+#bottom-actus-section > input[value='bottom-actus-press']:checked ~ div > .bottom-actus-item-press,
+#bottom-actus-section > input[value='bottom-actus-actus']:checked ~ div > .bottom-actus-item-actus,
+#bottom-actus-section > input[value='bottom-actus-infos']:checked ~ div > .bottom-actus-item-infos
+{
+    display: block;
+}
+
+#bottom-actus-section > div {
+    display: flex;
+    justify-content: space-between
+}
+
+.bottom-actus-item {
+    width: 30%;
+}
+
+.bottom-actus-item-actus, .bottom-actus-item-infos {
+    display: none;
+}
+
+.bottom-actus-item img {
+    width: 98%;
+    height: auto;
+    margin: 1%;
+}
+
+.bottom-actus-item-content {
+    margin: 1%;
+}
+
+.bottom-actus-item-content > .actu-date-and-comments {
+    margin: 30px 0;
+}
+
+.bottom-actus-item-content a {
+    color: grey
+}
+
+#slider-bottom-section {
+    margin-bottom: 100px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+#menu-nav-slider {
+    border: 1px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    color: white;
+    height: 30px;
+}
+
+
+#menu-nav-slider h2 {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.slider-bottom-nav-fa {
+    background-color: orange;
+    font-size: 10px;
+    padding: 10px 10px;
+    margin-top: 2px;
+    margin-left: -3px;
+    font-weight: bolder;
+}
+
+#slider-bottom-ctnr {
+    display: flex;
+    width: 130%;
+}
+
+.slider-bottom-img-ctnr {  
+    margin: 1%;
+    position: relative;
+}
+
+.slider-bottom-img-ctnr img {
+    width: 98%;
+    height: auto;
+    margin: 1%;
+}
+
+#slider-bottom-section > input[name='slider-section-nav'] {
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+}
+
+#slider-bottom-section > input[value='slide-right'] {
+    right: 0;
+}
+
+#slider-bottom-section > input[value='slide-left'] {
+    right: 30px;
+}
+
+#slider-bottom-section > input[value='slide-right']:checked ~ #slider-bottom-ctnr {
+    animation: slideRight 2s forwards;
+}
+
+#slider-bottom-section > input[value='slide-left']:checked ~ #slider-bottom-ctnr {
+    animation: slideLeft 2s forwards;
+}
+
+@keyframes slideLeft {
+    from {
+        margin-left: -30%;
+    }
+
+    to {
+        margin-left: 0;
+    }
+}
+
+@keyframes slideRight {
+    from {
+        margin-left: 0;
+    }
+
+    to {
+        margin-left: -30%;
+    }
+}
+
+footer {
+    padding-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(34, 34, 34, 0.9);
+}
+
+footer h3 {
+    color: white;
+    text-transform: uppercase;
+}
+
+footer p, footer span {
+    color: silver;
+}
+
+footer input[type='text'] {
+    background-color: black;
+    width: 100%;
+    border: none;
+    color: silver;
+    outline: none;
+    font-size: 19px;
+    height: 25px;
+}
+
+footer input[type='submit'] {
+   margin-top: 10px; 
+   background-color: orange;
+   text-transform: uppercase;
+   color: white;
+   border: none;
+   outline: none;
+   padding: 4px 7px; 
+}
+
+
+#footer-left {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer-left div:first-child {
+    width: 55%;
+}
+
+#footer-left div:last-child {
+    width: 35%;
+}
+
+#footer-right {
+    width: 25%;
+}
+
+#footer-left div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+   

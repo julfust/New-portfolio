@@ -1,0 +1,69 @@
+.home-section {
+    position: relative;
+    z-index: -1;
+    background-color: black;
+
+    &__logo {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-color: black;
+    }
+
+    .presentation-article {
+        width: 30vw;
+        margin-top: 62vh;
+        margin-left: 35vw;
+        z-index: 0;
+
+        @include tablet_layout {
+            margin-top: 64vh;
+        }
+
+        @include mobile_layout {
+            width: 40vw;
+            margin-top: 68vh;
+            margin-left: 30vw;
+        }
+
+        &__text {
+            width: 30vw;
+
+            @include mobile_layout {
+                width: 40vw;
+                margin-bottom: 3vw;
+            }
+
+            & > p {
+                color: $color-primary;
+                font-size: 1.5vw;
+                text-align: center;
+                font-family: 'Futured', Arial, Helvetica, sans-serif;
+
+                @include mobile_layout {
+                    width: 40vw;
+                    font-size: 3vw;
+                }
+                
+                &:nth-child(2) {
+                    margin-bottom: 1.5vw;
+
+                    @include mobile_layout {
+                        margin-bottom: 3vw;
+                    }
+                }
+
+                &:nth-child(3) {
+                    margin-bottom: 3vw;
+
+                    @include mobile_layout {
+                        margin-bottom: 6vw;
+                    }
+                }
+            }
+        }
+    }
+}

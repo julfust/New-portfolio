@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="Style.css">
+		<link rel="stylesheet" href="w3.css">
+	</head>
+
+	<body>
+
+		<div class="w3-container">
+
+			<!--Partie 1: Haut de page -> Logo et Titre !-->
+
+			<header class="w3-row">
+				<div class="w3-col l12 w3-hide-medium w3-hide-small w3-blue-grey w3-topbar w3-bottombar w3-leftbar w3-rightbar w3-border-light-blue animate1" style="margin-top: 1%; margin-bottom: 1%;">
+
+					<a href="#" alt="LienGip">
+						<div class="w3-col l2 w3-margin w3-blue-grey noBorder">
+							<img src="Logo4-5.jpg" alt="logo gip" />
+						</div>
+					</a>
+
+					<div class="w3-col l6 w3-margin w3-blue-grey noBorder"> <!--Responsive petit écran affichage du logo uniquement!-->
+						<h2>Gestion Informatisée du Patrimoine DB</h2>
+					</div>
+				</div>
+			</header>
+
+			<!--Partie 2: Corps de page Nav Bar/Menu/Aside !-->
+
+			<!--Nav barre !-->
+			<div class="w3-bar w3-large w3-blue-grey w3-topbar w3-bottombar w3-leftbar w3-rightbar w3-border-light-blue animate2 w3-hide-small w3-hide-medium" style="margin-bottom: 3%;">
+				<a href="#"  class="w3-bar-item w3-button" style="width: 14.285%;">Type</a>
+				<a href="#"  class="w3-bar-item w3-button" style="width: 14.285%;">Ville</a>
+				<a href="#"  class="w3-bar-item w3-button" style="width: 14.285%;">Territ.</a>
+				<a href="#"  class="w3-bar-item w3-button" style="width: 14.285%;">Canton</a>
+				<a href="#"  class="w3-bar-item w3-button" style="width: 14.285%;">Annur</a>
+				<a href="#" class="w3-bar-item w3-button w3-red" style="width: 14.285%;"><i class="glyphicon glyphicon-folder-open"></i> Pré-Archivage D8</a>
+				<a href="#"  class="w3-bar-item w3-button w3-right w3-green" style="width: 14.285%;"><i class="glyphicon glyphicon-wrench"></i> Astreinte</a>
+			</div>
+
+			<!-- Responsive affichage side bar !-->
+			<div class="w3-sidebar w3-bar-block w3-blue-grey w3-topbar w3-bottombar w3-leftbar w3-rightbar w3-border-light-blue w3-animate-left w3-hide-large" style="display:none;z-index:4" id="mySidebar">
+			  <a href="#" class="w3-bar-item w3-button">Type</a> 
+			  <a href="#" class="w3-bar-item w3-button">Ville</a>
+			  <a href="#" class="w3-bar-item w3-button">Territ.</a>
+			  <a href="#" class="w3-bar-item w3-button">Canton</a>
+			  <a href="#" class="w3-bar-item w3-button">Annur</a>
+			  <a href="#" class="w3-bar-item w3-button w3-red"><i class="glyphicon glyphicon-folder-open"></i> Pré-Archivage D8</a>
+			  <a href="#" class="w3-bar-item w3-button w3-green"><i class="glyphicon glyphicon-wrench"></i> Astreinte</a>
+			  <br /><br />
+			  <button class="w3-bar-item w3-button w3-black" onclick="w3_close()">Fermer X</button>
+			</div>
+
+			<div class="w3-overlay" onclick="w3_close()" style="cursor:pointer"></div>
+
+			<button class="w3-button w3-large w3-hide-large w3-blue-grey w3-topbar w3-bottombar w3-leftbar w3-rightbar w3-border-light-blue animate2" onclick="w3_open()">Autres</button>
+
+			<!--Script: ouverture/fermeture side Bar !-->
+			<script>
+				function w3_open() 
+				{
+				  document.getElementById("mySidebar").style.display = "block";
+				  document.getElementById("myOverlay").style.display = "block";
+				}
+
+				function w3_close() 
+				{
+				  document.getElementById("mySidebar").style.display = "none";
+				  document.getElementById("myOverlay").style.display = "none";
+				}
+			</script>
+
+			<div class="w3-dropdown-click w3-right">
+  				<button onclick="myFunction()" class="w3-button w3-large w3-hide-large w3-blue-grey w3-topbar w3-bottombar w3-leftbar w3-rightbar w3-border-light-blue animate2">Tabl. de bord</button>
+  				<div id="Demo" class="w3-dropdown-content">
+  					<div class="w3-container">
+					    <p>Liste des numeros mobile des agents de la DB</p>
+						<p>Vous pouvez accéder et imprimer la liste des numeros des téléphones portables des agents de la DB sur le lien ci-dessous</p>
+					</div>
+  				</div>
+			</div>
+
+			<script>
+				function myFunction() 
+				{
+				  var x = document.getElementById("Demo");
+				  if (x.className.indexOf("w3-show") == -1) 
+				  {  
+				    x.className += " w3-show";
+				  } 
+				  else 
+				  { 
+				    x.className = x.className.replace(" w3-show", "");
+				  }
+				}
+			</script>
+
+			<div class="w3-row">
+
+				<nav class="w3-col s11 m11 l6 w3-blue-grey w3-topbar w3-bottombar w3-leftbar w3-rightbar w3-border-light-blue animate2" style="padding-left: 5%; padding-right: 5%; padding-top: 1%">
+
+					<img src="Logo4-5.jpg" alt="logo gip" class="w3-hide-large animate2" />
+					<h2>Modules</h2>
+
+					<div class="mySlides animate3">
+
+						<div class="w3-col s12  w3-orange" style="padding-top: 1%; margin-top: 3%; margin-bottom: 3%;">
+							<ul>
+								<li><h1 style="text-decoration: underline;"><strong>Généraux</strong></h1></li>
+								<br />
+								<li><a href="#">GiCom</a></li>
+								<li><a href="#">Marchés</a></li>
+								<li><a href="#">Dépenses</a></li>
+								<li><a href="#">Energies</a></li>
+								<br />
+							</ul>
+						</div>
+					</div>
+
+					<div class="mySlides animate3">
+						<div class="w3-col s12  w3-purple" style="padding-top: 1%; margin-top: 3%; margin-bottom: 3%;">
+							<ul>
+								<li><h1 style="text-decoration: underline;"><strong>Médias</strong></h1></li>
+								<br />
+								<li><a href="#">Photos</a></li>
+								<li><a href="#">Plans</a></li>
+								<li><a href="#">Surfaces</a></li>
+								<li><a href="#">Cartes utiles</a></li>
+								<li><a href="#">Visu MBC</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="mySlides animate3">
+
+						<div class="w3-col s12  w3-blue" style="padding-top: 1%; margin-top: 5%; margin-bottom: 5%;">
+							<ul>
+								<li><h1 style="text-decoration: underline;"><strong>Centraux</strong></h1></li>
+								<br />
+								<li><a href="#">Equipement</a></li>
+								<li><a href="#">Batiment</a></li>
+								<li><a href="#">Actualités du Batiment</a></li>
+							</ul>
+							<br />
+						</div>
+					</div>
+
+					<div class="mySlides animate3">
+						<div class="w3-col s12  w3-green" style="margin-top: 1%; margin-bottom: 1%;">
+							<ul>
+								<li><h1 style="text-decoration: underline;"><strong>Métiers</strong></h1></li>
+								<li><a href="#">Vetuste</a></li>
+								<li><a href="#">Sécurité</a></li>
+								<li><a href="#">Urbanisme</a></li>
+								<li><a href="#">Accés Handic.</a></li>
+								<li><a href="#">Bilan Hand 2014</a></li>
+								<li><a href="#">Amiante</a></li>
+								<li><a href="#">Qualité de l'air</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="mySlides animate3">
+						<div class="w3-col s12  w3-yellow" style="padding-top: 1%; margin-top: 5%; margin-bottom: 5%">
+							<ul>
+								<li><h1 style="text-decoration: underline;"><strong>Evaluations</strong></h1></li>
+								<br />
+								<li><a href="#">Evaluation marchés BDC DB</a></li>
+								<li><a href="#">Etats Lieux Colléges</a></li>
+								<li><a href="#">Evaluation CVC</a></li>
+								<br />
+							</ul>
+						</div>
+					</div>
+
+					<div class="w3-row">
+					</div>
+
+					<div class="w3-center">
+			  			<div class="w3-section">
+			    			<button class="w3-button w3-small w3-blue-grey w3-topbar w3-bottombar w3-leftbar w3-rightbar w3-border-light-blue" onclick="plusDivs(-1)">❮ Prev</button>
+			    			<button class="w3-button w3-small w3-blue-grey w3-topbar w3-bottombar w3-leftbar w3-rightbar w3-border-light-blue" onclick="plusDivs(1)">Next ❯</button>
+			  			</div>
+
+						<button class="w3-button demo w3-round-xlarge w3-orange" onclick="currentDiv(1)"><span style="color: black;">Généraux</span></button>  
+			  			<button class="w3-button demo w3-round-xlarge w3-purple" onclick="currentDiv(2)">Médias</button>
+			  			<button class="w3-button demo w3-round-xlarge w3-blue" onclick="currentDiv(3)">Centraux</button>
+			  			<button class="w3-button demo w3-round-xlarge w3-green" onclick="currentDiv(4)">Métiers</button> 
+			  			<button class="w3-button demo w3-round-xlarge w3-yellow" onclick="currentDiv(5)"><span style="color: black;">Evaluations</span></button>  
+					</div>
+
+						<script>
+							var slideIndex = 1;
+							showDivs(slideIndex);
+
+							function plusDivs(n) 
+							{
+								showDivs(slideIndex += n);
+							}
+
+							function currentDiv(n) 
+							{
+								showDivs(slideIndex = n);
+							}
+
+							function showDivs(n) 
+								{
+									var i;
+									var x = document.getElementsByClassName("mySlides");
+									var dots = document.getElementsByClassName("demo");
+									if (n > x.length) {slideIndex = 1}    
+									if (n < 1) {slideIndex = x.length}
+									for (i = 0; i < x.length; i++) {
+									x[i].style.display = "none";  
+								}
+
+							for (i = 0; i < dots.length; i++) 
+							{
+								dots[i].className = dots[i].className.replace(" w3-red", "");
+							}
+
+							x[slideIndex-1].style.display = "block";  ;
+							}
+						</script>
+
+					</nav>
+
+				<aside class="w3-col l2 w3-blue-grey w3-right w3-topbar w3-bottombar w3-leftbar w3-rightbar w3-border-light-blue w3-hide-medium w3-hide-small animate2" style="width: 22%;">
+					
+					<h3>Tabl.bord Quelques brèves</h3>
+
+					<p>Liste des numeros mobile des agents de la DB</p>
+					<p>Vous pouvez accéder et imprimer la liste des numeros des téléphones portables des agents de la DB sur le lien ci-dessous</p>
+					</div>
+				</aside>
+			</div>
+
+			<footer class="w3-col s12 w3-blue-grey  w3-topbar w3-bottombar w3-leftbar w3-rightbar w3-border-light-blue" style="margin-top: 3%;">
+				<p>GiP: Copyright @ http://gip.valdemarne.fr</p>	
+			</footer>
+
+		</div>
+	</body>
+</html>

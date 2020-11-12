@@ -1,0 +1,185 @@
+body 
+{
+  padding-top: 10px;
+  margin:0;
+  padding:0;
+  background: url(Bat7.jpg) no-repeat center fixed; 
+  -webkit-background-size: cover;
+  background-size: cover; 
+}
+
+[class*="col-"], [class*="w3-col"], footer 
+{
+  background-color: lightgreen;
+  border: 2px solid black;
+  border-radius: 6px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.noBorder
+{
+  border: none;
+}
+
+ul
+{
+  list-style: none;
+}
+
+@media screen and (min-width: 992px)
+{
+  nav
+  {
+    margin-left: 20%;
+    margin-bottom: 3%;
+  }
+}
+
+@media all and (max-width: 992px)
+{
+  nav
+  {
+    margin-left: 4%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+  }
+}
+
+  .animate1
+  {
+    animation-duration: 3s;
+    animation-name: slideInL;
+  }
+
+  @-webkit-keyframes slideInL
+  {
+    from 
+    {
+      margin-left: 100%;
+      width: 200%; 
+    }
+
+    to 
+    {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+  @keyframes slideInL 
+  {
+    from 
+    {
+      margin-left: 100%;
+      width: 200%; 
+    }
+
+    to 
+    {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+  .animate2
+  {
+    animation-duration: 3s;
+    animation-name: fadeIn;
+  }
+
+@-webkit-keyframes fadeIn
+{
+  from 
+  {
+    opacity: 0; 
+  }
+
+  to 
+  {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn
+{
+  from 
+  {
+    opacity: 0; 
+  }
+
+  to 
+  {
+    opacity: 1;
+  }
+}
+
+.animate3
+{
+  animation-duration: 0.5s;
+  animation-name: next;
+}
+
+@-webkit-keyframes next
+{
+  from 
+  {
+    margin-right: 50%;
+  }
+
+  to 
+  {
+    margin-right: 0%;
+  }
+}
+
+@keyframes next
+{
+  from 
+  {
+    margin-right: 40%; 
+  }
+
+  to 
+  {
+    margin-right: 0%;
+  }
+}
+
+.animate4
+{
+  animation-duration: 1s;
+  animation-name: up;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@-webkit-keyframes up
+{
+  from 
+  {
+    position: relative;
+    top: -5px;
+  }
+
+  to 
+  {
+    position: relative;
+    top: 10px;
+  }
+}
+
+@keyframes up
+{
+  from 
+  {
+    position: relative;
+    top: -5px; 
+  }
+
+  to 
+  {
+    position: relative;
+    top: 10px;
+  }
+}

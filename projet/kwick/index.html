@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Kwick!</title>
+		<link rel="stylesheet" href="assets/css/style.css">
+	</head>
+	<body>
+		<!-- integration de l'interface -->
+
+		<!-- Bouton pour tester le temps de reponse du serveur -->
+		<button id="bt_ping">PING</button>
+
+		<!-- Page de connexion -->
+		<div id="global-ctnr">
+
+			<!-- Conteneur : titre du site + formulaire -->
+			<div id="sign-in-section">
+
+				<div id="logo-section">
+					<img src="assets/img/Quotidien-logo.png" />
+					<h1>KWICK!</h1>
+				</div>
+
+				<!-- Formulaire de connexion Pseudo/Mdp -->
+				<form>
+					<label for="pseudo">Pseudo :</label>
+					<input type="text" name="pseudo" id="pseudo"/>
+
+					<label for="pseudo">Mots de passe :</label>
+					<input type="password" name="pass" id="pass"/>
+
+					<!-- Bouton de confirmation et lien vers d'autres pages-->
+					<input type="button" value="Se connecter" id="connexion" />
+					<button><a href="inscription.html">Creer un compte</a></button>				
+				</form>
+				
+			</div>
+
+		</div>
+
+		<!-- Lien vers les fichiers JavaScript -->
+		<script src="assets/src/jquery.js"></script>
+		<script src="assets/src/kwick.js"></script>
+		<script src="assets/src/all.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				app.init();
+			});
+		</script>
+	</body>
+</html>

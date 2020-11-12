@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kwick!</title>
+    <link rel="stylesheet" href="assets/css/messagerie.css">
+</head>
+<body>
+
+    <div class="global-ctnr">
+
+        <!-- Header-Bar : Contient les titres principaux de la page + le bouton de déconnexion -->
+        <header>
+            <div id="logo-section">
+                <img src="assets/img/Quotidien-logo.png">
+                <h2>KWICK!</h2>
+            </div>
+            
+            <h1>Messagerie</h1>
+
+            <div id="button-ctnr">
+                <i class="fas fa-power-off"></i>
+                <button>Déconnexion</button>
+            </div>           
+        </header>
+
+            <!-- Conteneur globale de l'interface : Chat + List des contact -->
+            <section id="main-interface-section">
+                
+                <!-- Conteneur du chat composée d'1 formulaire et d'1 div : Registre des message + Envoie des messages -->
+                <div id="chat-section">
+                    <div class="title-ctnr"> <!-- Titre du chat -->
+                        <i class="fas fa-comments"></i>
+                        <h3>Discussion<h3>
+                    </div>
+
+                    <div id="message-registre"></div><!-- Conteneur permettant d'afficher le registre des messages -->
+
+                    <textarea rows="3" cols="120" id="message-submit"></textarea> <!-- Zone de texte permettant d'envoyer un message -->
+                    <input type="reset" value="Envoyer" id="submit"/> <!-- Bouton pour envoyer le message -->
+
+                </div>
+
+                <!-- Liste des contacts -->
+                <asside id="contact-section">
+                    <div class="title-ctnr" id="title-contact-ctnr">
+                        <i class="fas fa-address-book"></i><!-- Icone logo contact -->
+                        <h3>En ligne</h3>
+                    </div>
+                </asside>
+                
+            </section>
+        </div>
+        <!-- lien vers les fichiers JavaScript -->
+        <script src="assets/src/jquery.js"></script>
+        <script src="assets/src/kwick.js"></script>
+        <script src="assets/src/all.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                app.init();
+                app.logged();
+                setInterval(app.talkList, 500);                
+            });
+        </script>
+</body>
+</html>

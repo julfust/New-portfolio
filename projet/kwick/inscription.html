@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KWICK!</title>
+    <link rel="stylesheet" href="assets/css/inscription.css">
+</head>
+
+<body>
+	
+    <div id="global-ctnr">
+
+		<!-- Conteneur : Titre du site + Formulaire -->
+		<div id="sign-in-section">
+
+			<!-- Haut de page : Titre et logo -->
+			<div id="logo-section">
+				<img src="assets/img/Quotidien-logo.png" />
+				<h1>KWICK!</h1>
+			</div>
+
+			<!-- Formulaire d'inscription Pseudo/Mots de passe/Mots de passe de confirmation-->
+			<form>
+				<label for="pseudo">Pseudo :</label>
+				<input type="text" name="pseudo" id="pseudo"/>
+				
+				<label for="pass">Mots de passe :</label>
+				<input type="password" name="pass" id="pass"/>
+				
+				<label for="confirmation">Confirmation du mots de passe :</label>
+				<input type="password" name="confirmation" id="confirmation"/>
+				
+				<!-- Bouton de confirmation et liens vers les autres pages-->
+				<input type="button" value="S'inscrire" id="create"/>
+				<button><a href="index.html">Se connecter</a></button>
+			</form>
+
+		</div>
+
+	</div>
+	<!-- Lien vers les fichiers JavaScript -->
+    <script src="assets/src/jquery.js"></script>
+	<script src="assets/src/kwick.js"></script>
+	<script src="assets/src/all.min.js"></script> 
+	<script>
+		$(document).ready(function() {
+			app.init();
+		});
+	</script> 
+</body>
+</html>

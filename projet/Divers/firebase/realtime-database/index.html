@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Realtime Database - Firebase Playground</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+</head>
+<body>
+<script>window.location.protocol !== 'http:' && document.write('<div class="alert alert-danger mb-0"><b>Attention ! Vous visitez cette page depuis l\'adresse « '+ window.document.URL +' »</b> !<br>Vous devriez utiliser un serveur web HTTP local (localhost) !<br>Pour lancer un serveur web local, ouvrez votre terminal et tapez la commande : <b>npm start</b></div>');</script>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">🔥 &laquo; Retour</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+</header>
+
+<main class="container mt-3">
+    <h1>Realtime Database <small>- Firebase Playground</small></h1>
+    <hr>
+    
+    <div class="row">
+
+        <!-- LISTE DES MESSAGES -->
+        <div class="col-md-6">
+            <h2>Messages</h2>
+            <p>Liste des messages en direct depuis la base :</p>
+            <ul id="messages">
+                <!-- Afficher ici chaque message et son auteur dans des <li> ...-->
+            </ul>
+            <hr>
+            <form class="form form-inline" id="addMessageForm">
+                <h3>Nouveau message</h3>
+                <div class="form-group">
+                    <input required type="text" class="form-control" id="pseudo" placeholder="pseudo">
+                    <input required type="text" class="form-control" id="message" placeholder="message">
+                    <button type="submit" class="btn btn-primary">Ajouter</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- ---------------------------------------------------------------- -->
+        <!-- LISTE DES UTILISATEURS -->
+
+        <div class="col-md-6">
+            <h2>Utilisateurs</h2>
+            <p>Liste des utilisateurs en direct depuis la base :</p>
+            <ul id="users">
+                <!-- Afficher ici chaque utilisateur dans des <li> ...-->
+            </ul>
+            <hr>
+            <form class="form form-inline" id="addUserForm">
+                <h3>Nouvel utilisateur</h3>
+                <div class="form-group">
+                    <input required type="text" class="form-control" id="nom" placeholder="nom">
+                    <input required type="number" min="0" class="form-control" id="age" placeholder="age">
+                    <button type="submit" class="btn btn-primary">Ajouter</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</main>
+
+<!-- jQuery et Bootstrap-->
+<script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://unpkg.com/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+
+<!-- SDK Firebase -->
+<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-database.js"></script>
+<script src="realtime-database.js" type="module"></script>
+
+</body>
+</html>
