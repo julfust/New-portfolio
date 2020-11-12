@@ -1599,7 +1599,7 @@ body .fullpage .fp-slidesNav span {
 
 .project-section .slide-other-project .container .project-section .title {
   width: 100%;
-  margin-bottom: 4vh;
+  margin-bottom: 6vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1693,7 +1693,7 @@ body .fullpage .fp-slidesNav span {
 }
 
 .project-section .slide-other-project .container .project-section .list__item {
-  margin-bottom: 4vh;
+  margin-bottom: 6vh;
   color: #1AFF00;
   font-size: 2vw;
   text-align: center;
