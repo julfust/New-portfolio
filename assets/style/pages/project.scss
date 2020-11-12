@@ -125,7 +125,7 @@
             width: 40vw;
             margin: auto;
             margin-top: 3vh;
-            margin-bottom: 8vh;
+            margin-bottom: 6vh;
 
             @include mobile_layout {
                 margin-top: 0;
@@ -140,11 +140,11 @@
                 font-family: 'Futured', Arial, Helvetica, sans-serif;
 
                 @include tablet_layout {
-                    font-size: 3.5vw;
+                    font-size: 3vw;
                 }
 
                 @include mobile_layout {
-                    font-size: 4.5vw;
+                    font-size: 4vw;
                 }
             }
         }
@@ -174,7 +174,7 @@
 
                 .title {
                     width: 100%;
-                    margin-bottom: 6vh;
+                    margin-bottom: 4vh;
                     display: flex;
                     justify-content: center;
 
@@ -230,11 +230,11 @@
                         font-family: 'Futured', Arial, Helvetica, sans-serif;
 
                         @include tablet_layout {
-                            font-size: 3.5vw;
+                            font-size: 3vw;
                         }
 
                         @include mobile_layout {
-                            font-size: 4.5vw;
+                            font-size: 4vw;
                         }
                     }
                 }
@@ -247,7 +247,7 @@
                     }
 
                     &__item {
-                        margin-bottom: 6vh;
+                        margin-bottom: 4vh;
                         color: $color-primary;
                         font-size: 2vw;
                         text-align: center;
@@ -260,13 +260,71 @@
                         }
 
                         @include tablet_layout {
-                            font-size: 3.5vw;
+                            font-size: 3vw;
                         }
 
                         @include mobile_layout {
                             margin-bottom: 4vh;
-                            font-size: 4.5vw;
+                            font-size: 4vw;
                         }
+                    }
+                }
+            }
+        }
+
+        &__article {
+            width: 40vw;
+            margin: auto;
+            margin-top: 3vh;
+
+            @include mobile_layout {
+                width: 70vw;
+            }
+
+            & > p {
+                color: $color-primary;
+                font-size: 1.5vw;
+                text-align: center;
+                font-family: 'Futured', Arial, Helvetica, sans-serif;
+
+                @include tablet_layout {
+                    font-size: 2vw;
+                }
+
+                @include mobile_layout {
+                    font-size: 3.5vw;
+                }
+            }
+
+            & > button {
+                height: 3vw;
+                margin: auto;
+                display: block;
+                background-color: $color-secondary;
+                transition: background-color 400ms;
+
+                @include mobile_layout {
+                    height: 8vw;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: $color-primary;
+                }
+
+                & > a {
+                    color: white;
+                    font-size: 1.5vw;
+                    text-align: center;
+                    text-decoration: none;
+                    font-family: 'Futured', Arial, Helvetica, sans-serif;
+
+                    @include tablet_layout {
+                        font-size: 2vw;
+                    }
+
+                    @include mobile_layout {
+                        font-size: 3.5vw;
                     }
                 }
             }

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio-julienf.000webhostapp.com/sitemap.xml
