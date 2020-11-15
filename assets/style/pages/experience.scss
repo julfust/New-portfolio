@@ -49,7 +49,7 @@
                 width: 40vw;
                 height: 20vw;
                 margin: auto;
-                margin-bottom: 6vh;
+                margin-bottom: 5vh;
 
                 @include tablet_layout {
                     width: 42vw;
@@ -71,7 +71,7 @@
                 width: 60vw;
                 color: $color-secondary;
                 text-align: center;
-                font-size: 1.2vw;
+                font-size: 1.4vw;
                 font-family: 'Fira Mono', Arial, Helvetica, sans-serif;
 
                 @include tablet_layout {
@@ -125,7 +125,7 @@
 
             .gallery {
                 width: 80vw;
-                margin-bottom: 4vh;
+                margin-bottom: 5vh;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -142,8 +142,8 @@
                 }
 
                 &__picture {
-                    width: 32.5vw;
-                    height: 17vw;
+                    width: 28.5vw;
+                    height: 15vw;
 
                     @include tablet_layout {
                         width: 34.5vw;
@@ -195,7 +195,7 @@
                 width: 80vw;
                 margin-bottom: 2vh;
                 color: $color-primary;
-                font-size: 1.2vw;
+                font-size: 1.4vw;
                 text-align: center;
                 font-family: 'Fira Mono', Arial, Helvetica, sans-serif;
 

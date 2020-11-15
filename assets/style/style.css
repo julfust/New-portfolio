@@ -1143,7 +1143,7 @@ body .fullpage .fp-slidesNav span {
   width: 40vw;
   height: 20vw;
   margin: auto;
-  margin-bottom: 6vh;
+  margin-bottom: 5vh;
 }
 
 @media all and (max-width: 992px) {
@@ -1169,7 +1169,7 @@ body .fullpage .fp-slidesNav span {
   width: 60vw;
   color: #FF6600;
   text-align: center;
-  font-size: 1.2vw;
+  font-size: 1.4vw;
   font-family: 'Fira Mono', Arial, Helvetica, sans-serif;
 }
 
@@ -1232,7 +1232,7 @@ body .fullpage .fp-slidesNav span {
 
 .experience-section .slide-work .article .gallery {
   width: 80vw;
-  margin-bottom: 4vh;
+  margin-bottom: 5vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1263,8 +1263,8 @@ body .fullpage .fp-slidesNav span {
 }
 
 .experience-section .slide-work .article .gallery__picture {
-  width: 32.5vw;
-  height: 17vw;
+  width: 28.5vw;
+  height: 15vw;
 }
 
 @media all and (max-width: 992px) {
@@ -1320,7 +1320,7 @@ body .fullpage .fp-slidesNav span {
   width: 80vw;
   margin-bottom: 2vh;
   color: #1AFF00;
-  font-size: 1.2vw;
+  font-size: 1.4vw;
   text-align: center;
   font-family: 'Fira Mono', Arial, Helvetica, sans-serif;
 }

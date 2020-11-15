@@ -16,6 +16,12 @@ export let view = {
     },
 
     animateSection2: function() {
+        function removeBar() {
+            let target = this.targets()[0]
+
+            target.style.display = "none"
+        }
+
         function triggerScramble() {
             let target = this.targets()[0]
                 
@@ -30,13 +36,13 @@ export let view = {
 
         let sectionTwoAnimation = gsap.timeline()
         
-        sectionTwoAnimation.fromTo(".overground1", {x: "-25vw"}, {x:"50vw", duration: 1.25})
+        sectionTwoAnimation.fromTo(".overground1", {x: "-30vw"}, {x:"55vw", duration: 1.25, onComplete: removeBar})
             .fromTo(".title1", {opacity: 0}, {opacity: 1, duration: 0.5, onStart: triggerScramble}, "-=0.4")
-            .fromTo(".overground2", {x: "-25vw"}, {x: "50vw", duration: 1.25}, "-=0.75")
+            .fromTo(".overground2", {x: "-30vw"}, {x: "55vw", duration: 1.25, onComplete: removeBar}, "-=0.75")
             .fromTo(".title2", {opacity: 0}, {opacity: 1, duration: 0.5, onStart: triggerScramble}, "-=0.4")
-            .fromTo(".overground3", {x: "-25vw"}, {x: "50vw", duration: 1.25}, "-=0.75")
+            .fromTo(".overground3", {x: "-30vw"}, {x: "55vw", duration: 1.25, onComplete: removeBar}, "-=0.75")
             .fromTo(".title3", {opacity: 0}, {opacity: 1, duration: 0.5, onStart: triggerScramble}, "-=0.4")
-            .fromTo(".overground4", {x: "-25vw"}, {x: "50vw", duration: 1.25}, "-=0.75")
+            .fromTo(".overground4", {x: "-30vw"}, {x: "55vw", duration: 1.25, onComplete: removeBar}, "-=0.75")
             .fromTo(".title4", {opacity: 0}, {opacity: 1, duration: 0.5, onStart: triggerScramble}, "-=0.4")
             .fromTo(".black-screen", {opacity: 0}, {opacity: 1, duration: 1.8}, "-=0.750")
             .fromTo(".spotlight", {opacity: 0}, {opacity: 1, duration: 1.8, onComplete: animateSpotlight}, "-=1")
