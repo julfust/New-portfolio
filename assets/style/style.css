@@ -1627,7 +1627,6 @@ body .fullpage .fp-slidesNav span {
   .project-section .slide-other-project .container .project-section .title__picture--1 {
     width: 8vw;
     height: 4vw;
-    margin-right: 2vw;
   }
 }
 
@@ -1647,7 +1646,6 @@ body .fullpage .fp-slidesNav span {
   .project-section .slide-other-project .container .project-section .title__picture--2 {
     width: 3vw;
     height: 4vw;
-    margin-right: 2vw;
   }
 }
 
@@ -1723,7 +1721,7 @@ body .fullpage .fp-slidesNav span {
 .project-section .slide-other-project__article {
   width: 40vw;
   margin: auto;
-  margin-top: 3vh;
+  margin-top: 7vh;
 }
 
 @media all and (max-width: 768px) {
@@ -1733,6 +1731,7 @@ body .fullpage .fp-slidesNav span {
 }
 
 .project-section .slide-other-project__article > p {
+  margin-bottom: 2vh;
   color: #1AFF00;
   font-size: 1.5vw;
   text-align: center;
