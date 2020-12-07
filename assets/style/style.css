@@ -1,3 +1,29 @@
+@-webkit-keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes moveDown {
+  100% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+}
+
+@keyframes moveDown {
+  100% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+}
+
 @-webkit-keyframes spotlightPulse {
   0% {
     opacity: 1;
@@ -189,34 +215,88 @@ body .fullpage .fp-slidesNav span {
   background-color: black;
 }
 
-.home-section__logo {
+.home-section .background {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 0;
+  top: 11vh;
   left: 0;
   z-index: -1;
-  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  overflow: hidden;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  opacity: 0;
+  -webkit-animation: fadeIn 5s forwards;
+          animation: fadeIn 5s forwards;
+}
+
+.home-section .background:hover {
+  cursor: default;
+}
+
+.home-section .background__char-list {
+  padding: 1rem 0;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  -webkit-text-orientation: upright;
+  -moz-text-orientation: upright;
+  text-orientation: upright;
+  font-size: 1.2vw;
+  letter-spacing: 0.3rem;
+  word-spacing: 1rem;
+  color: #80FF00;
+  text-shadow: 0 0 2px #60F000, 1px -1px 2px #60F000;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-animation: moveDown linear 30s infinite;
+          animation: moveDown linear 30s infinite;
+}
+
+.home-section .background__char-list:nth-child(5n+1) {
+  -webkit-animation-duration: 13s;
+          animation-duration: 13s;
+}
+
+.home-section .background__char-list:nth-child(5n+2) {
+  -webkit-animation-duration: 53s;
+          animation-duration: 53s;
+}
+
+.home-section .background__char-list:nth-child(5n+3) {
+  -webkit-animation-duration: 29s;
+          animation-duration: 29s;
+}
+
+.home-section .background__char-list:nth-child(4n) {
+  -webkit-animation-duration: 43s;
+          animation-duration: 43s;
 }
 
 .home-section .presentation-article {
   width: 30vw;
-  margin-top: 62vh;
-  margin-left: 35vw;
+  margin-top: 54vh;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
   z-index: 0;
-}
-
-@media all and (max-width: 992px) {
-  .home-section .presentation-article {
-    margin-top: 64vh;
-  }
+  background-color: black;
 }
 
 @media all and (max-width: 768px) {
   .home-section .presentation-article {
-    width: 40vw;
-    margin-top: 68vh;
-    margin-left: 30vw;
+    width: 44vw;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    margin-top: 56vh;
   }
 }
 
@@ -226,13 +306,12 @@ body .fullpage .fp-slidesNav span {
 
 @media all and (max-width: 768px) {
   .home-section .presentation-article__text {
-    width: 40vw;
-    margin-bottom: 3vw;
+    width: 44vw;
   }
 }
 
 .home-section .presentation-article__text > p {
-  color: #1AFF00;
+  color: #FF6600;
   font-size: 1.5vw;
   text-align: center;
   font-family: 'Futured', Arial, Helvetica, sans-serif;
@@ -240,7 +319,7 @@ body .fullpage .fp-slidesNav span {
 
 @media all and (max-width: 768px) {
   .home-section .presentation-article__text > p {
-    width: 40vw;
+    width: 44vw;
     font-size: 3vw;
   }
 }
@@ -1627,7 +1706,6 @@ body .fullpage .fp-slidesNav span {
   .project-section .slide-other-project .container .project-section .title__picture--1 {
     width: 8vw;
     height: 4vw;
-    margin-right: 2vw;
   }
 }
 
@@ -1647,7 +1725,6 @@ body .fullpage .fp-slidesNav span {
   .project-section .slide-other-project .container .project-section .title__picture--2 {
     width: 3vw;
     height: 4vw;
-    margin-right: 2vw;
   }
 }
 
@@ -1723,7 +1800,7 @@ body .fullpage .fp-slidesNav span {
 .project-section .slide-other-project__article {
   width: 40vw;
   margin: auto;
-  margin-top: 3vh;
+  margin-top: 7vh;
 }
 
 @media all and (max-width: 768px) {
@@ -1733,6 +1810,7 @@ body .fullpage .fp-slidesNav span {
 }
 
 .project-section .slide-other-project__article > p {
+  margin-bottom: 2vh;
   color: #1AFF00;
   font-size: 1.5vw;
   text-align: center;

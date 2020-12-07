@@ -192,7 +192,6 @@
                             @include tablet_layout {
                                 width: 8vw;
                                 height: 4vw;
-                                margin-right: 2vw;
                             }
 
                             @include mobile_layout {
@@ -208,7 +207,6 @@
                             @include tablet_layout {
                                 width: 3vw;
                                 height: 4vw;
-                                margin-right: 2vw;
                             }
 
                             @include mobile_layout {
@@ -275,13 +273,14 @@
         &__article {
             width: 40vw;
             margin: auto;
-            margin-top: 3vh;
+            margin-top: 7vh;
 
             @include mobile_layout {
                 width: 70vw;
             }
 
             & > p {
+                margin-bottom: 2vh;
                 color: $color-primary;
                 font-size: 1.5vw;
                 text-align: center;

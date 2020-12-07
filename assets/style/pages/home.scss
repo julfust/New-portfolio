@@ -3,48 +3,91 @@
     z-index: -1;
     background-color: black;
 
-    &__logo {
+    .background {
         width: 100%;
         height: 100%;
         position: absolute;
-        top: 0;
+        top: 11vh;
         left: 0;
         z-index: -1;
-        background-color: black;
+        display: flex;
+        justify-content: space-around;
+        overflow: hidden;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        opacity: 0;
+        animation: fadeIn 5s forwards;
+
+        &:hover {
+            cursor: default;
+        }
+
+        &__char-list {
+            padding: 1rem 0;
+            writing-mode: vertical-rl;
+            -webkit-text-orientation: upright;
+            -moz-text-orientation: upright;
+            text-orientation: upright;
+            font-size: 1.2vw;
+            letter-spacing: 0.3rem;
+            word-spacing: 1rem;
+            color: #80FF00;
+            text-shadow: 0 0 2px #60F000, 1px -1px 2px #60F000;
+            transform: translateY(-100%);
+            animation: moveDown linear 30s infinite;
+
+            &:nth-child(5n+1) {
+                animation-duration: 13s;
+            }
+            
+            &:nth-child(5n+2) {
+                animation-duration: 53s;
+            }
+            
+            &:nth-child(5n+3) {
+                animation-duration: 29s;
+            }
+            
+            &:nth-child(4n) {
+                animation-duration: 43s;
+            }
+        }
     }
 
     .presentation-article {
         width: 30vw;
-        margin-top: 62vh;
-        margin-left: 35vw;
+        margin-top: 54vh;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 1vw;
+        padding-bottom: 1vw;
         z-index: 0;
-
-        @include tablet_layout {
-            margin-top: 64vh;
-        }
+        background-color: black;
 
         @include mobile_layout {
-            width: 40vw;
-            margin-top: 68vh;
-            margin-left: 30vw;
+            width: 44vw;
+            padding-top: 3vw;
+            padding-bottom: 3vw;
+            margin-top: 56vh;
         }
 
         &__text {
             width: 30vw;
 
             @include mobile_layout {
-                width: 40vw;
-                margin-bottom: 3vw;
+                width: 44vw;
             }
 
             & > p {
-                color: $color-primary;
+                color: $color-secondary;
                 font-size: 1.5vw;
                 text-align: center;
                 font-family: 'Futured', Arial, Helvetica, sans-serif;
 
                 @include mobile_layout {
-                    width: 40vw;
+                    width: 44vw;
                     font-size: 3vw;
                 }
                 
